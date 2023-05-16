@@ -8,7 +8,7 @@ import requests
 
 
 class TranskribusProcessingAPI:
-    """ Wrapper class of the Transkribus Processing API.
+    """ Wrapper class of the Transkribus Processing API (Transkribus metagrapho API).
 
     Swagger documentation of the API at https://transkribus.eu/processing/swagger/.
 
@@ -127,26 +127,3 @@ class TranskribusProcessingAPI:
                                 headers=headers)
 
         return response
-
-
-def tester():
-    """ works fine """
-    api = TranskribusProcessingAPI()
-
-    get_response = api.get_result(process_id=4982858)
-    print(get_response.json())
-
-    exit()
-
-    from sample_image import SAMPLE_IMAGE
-    post_response = api.post_processes(line_model_id=49272,  # Mixed Text Line Orientation
-                                       atr_model_id=39995,  # Transkribus Print M1
-                                       image=SAMPLE_IMAGE)
-    print(post_response.json())
-    process_id = post_response.json()["processId"]
-    print(process_id)
-    get_response = api.get_result(process_id=process_id)
-    print(get_response.json())
-
-
-

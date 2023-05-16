@@ -125,34 +125,3 @@ class Item:
                     self.__setattr__(key, item.serialize()[key])
             except Exception:
                 raise
-
-
-
-
-@dataclass
-class Fotoblatt(Item):
-    """ A representation of a Tropy item with the 'Fotoblatt' type. """
-
-    type: str = "Fotoblatt"
-
-
-@dataclass
-class Foto(Item):
-    """ A representation of a Tropy item with the 'Foto' type. """
-
-    type: str = "Foto"
-    # TODO: recto/verso, size
-
-
-@dataclass
-class Blatt(Item):
-    """ A representation of a Tropy item with the 'Blatt' type. """
-
-    type: str = "Blatt"
-
-
-@dataclass
-class Aufgeklebt(Item):
-    """ A representation of a Tropy item with the 'Aufgeklebt' type. """
-
-    type: str = "Aufgeklebt"
