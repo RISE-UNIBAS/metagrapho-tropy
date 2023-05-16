@@ -10,18 +10,24 @@ class TranskribusProcessingAPI:
     """ Wrapper class of the Transkribus Processing API.
 
     Swagger documentation of the API at https://transkribus.eu/processing/swagger/.
+
+    :param user: Transkribus user name
+    :param password: Transkribus password
     """
 
-    def __init__(self) -> None:
+    def __init__(self,
+                 user: str,
+                 password: str) -> None:
+        self.user = user
+        self.password = password
         self.base_url = "https://transkribus.eu/processing/v1"
         self.refresh_token = None
         self.setup()
 
     def setup(self):
         try:
-            from credentials import USER, PASSWORD
-            response = self.authenticate(user=USER,
-                                         password=PASSWORD)
+            response = self.authenticate(user=self.user,
+                                         password=self.password)
             if response.status_code != 200:
                 print(f"{response.json()}")
                 raise ConnectionError
@@ -133,4 +139,4 @@ def tester():
     print(get_response.json())
 
 
-tester()
+
