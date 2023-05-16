@@ -2,6 +2,7 @@
 =============
 TranskribusProcessingAPI class.
 """
+import logging
 
 import requests
 
@@ -11,7 +12,7 @@ class TranskribusProcessingAPI:
 
     Swagger documentation of the API at https://transkribus.eu/processing/swagger/.
 
-    :param user: Transkribus user name
+    :param user: Transkribus username
     :param password: Transkribus password
     """
 
@@ -34,6 +35,7 @@ class TranskribusProcessingAPI:
             self.refresh_token = response.json()["access_token"]
             print("Authorization successful.")
         except ImportError:
+            logging.exception("Could not authenticate metagrapho API!")
             raise
 
     @staticmethod
@@ -59,10 +61,15 @@ class TranskribusProcessingAPI:
 
     def post_processes(self,
                        line_model_id: int,
-                       htr_model_id: int,
+                       atr_model_id: int,
                        image: str
                        ) -> requests.Response:
-        """ Wrapper of https://transkribus.eu/processing/swagger/#/Submit%20data%20for%20processing. """
+        """ Wrapper of https://transkribus.eu/processing/swagger/#/Submit%20data%20for%20processing.
+
+        :param line_model_id: the Transkribus layout detection model ID
+        :param atr_model_id: the Transkribus ATR model ID
+        :param image: an image encoded to Base64
+        """
 
         headers = {
             "accept": "application/json",
@@ -76,7 +83,7 @@ class TranskribusProcessingAPI:
                     "modelId": line_model_id,
                 },
                 "textRecognition": {
-                    "htrId": htr_model_id,
+                    "htrId": atr_model_id,
                 },
             },
             "image": {
@@ -93,7 +100,10 @@ class TranskribusProcessingAPI:
 
     def get_result(self,
                    process_id: int):
-        """ Wrapper of https://transkribus.eu/processing/swagger/#/Retrieve%20processing%20status%20and%20result. """
+        """ Wrapper of https://transkribus.eu/processing/swagger/#/Retrieve%20processing%20status%20and%20result.
+
+        :param process_id: the Transkribus Processing API "processId" parameter
+        """
 
         headers = {
             "accept": "application/json",
@@ -130,7 +140,7 @@ def tester():
 
     from sample_image import SAMPLE_IMAGE
     post_response = api.post_processes(line_model_id=49272,  # Mixed Text Line Orientation
-                                       htr_model_id=39995,  # Transkribus Print M1
+                                       atr_model_id=39995,  # Transkribus Print M1
                                        image=SAMPLE_IMAGE)
     print(post_response.json())
     process_id = post_response.json()["processId"]
