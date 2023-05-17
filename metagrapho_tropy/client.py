@@ -181,26 +181,33 @@ class Client:
 
         return dict_map
 
-    def transform_coordinates(self,
-                              coordinates: str) -> None:
+    @staticmethod
+    def _transform_coordinates(coordinates: str) -> None:
         """ Transform Transkribus coordinates points to Tropy coordinates.
 
         Sample Transkribus coordinates points: '192,458 192,514 332,514 332,458'. Read the tuple '192,
         458' as 'x, y' where '0, 0' is the top left corner of an image. Note that the y-axis is inverted (going down
-        is positive). The coordinates describe a rectangle where the first tuple is top left, the second tuple is
-        top right, the third tuple is bottom right and the fourth tuple is bottom left.
+        is positive).
 
         Sample output coordinates:
 
         :param coordinates: value of Transkribus 'coords' key
         """
 
-        parsed_coordinates = coordinates.split(" ")
+        parsed_coordinates = [t.split(",") for t in coordinates.split(" ")]
+        x_coordinates = [int(c.split(",")[0]) for c in coordinates.split(" ")]
+        y_coordinates = [int(c.split(",")[1]) for c in coordinates.split(" ")]
 
-        tropy_x = int(parsed_coordinates[0].split(",")[0])
-        tropy_y = int(parsed_coordinates[0].split(",")[0])
-        tropy_width =
-        tropy_height =
+        tropy_x = min(x_coordinates)
+        tropy_y = min(y_coordinates)
+        tropy_width = max(x_coordinates) - tropy_x
+        tropy_height = max(y_coordinates) - tropy_y
+
+        print(tropy_x)
+        print(tropy_y)
+        print(tropy_width)
+        print(tropy_height)
+
 
     def process_tropy(self,
                       tropy_file_path: str,
@@ -313,6 +320,9 @@ class Client:
         :param tropy_save_path: complete path to enriched Tropy save file including file extension, defaults to None
         """
 
+        print(self._transform_coordinates("192,458 192,514 332,514 332,458"))
+
+
         tropy = self._validate(tropy_file_path=tropy_file_path,
                                mapping_file_path=mapping_file_path,
                                tropy_save_path=tropy_save_path)
@@ -324,7 +334,7 @@ class Client:
         for item in tropy.graph:
 
             if DEBUG is True:
-                if c > 5:
+                if c > 3:
                     continue
 
             parsed_item = Item()
@@ -336,7 +346,11 @@ class Client:
                 logging.info(f"Item {parsed_item.identifier} with {result}.")
                 print(parsed_item.identifier)
                 print(result.json())
-                print(result.json()["content"]["text"])
+                # print(result.json()["content"]["text"])
+                print(result.json()["text"]["regions"])
+
+                # for each text region in
+
                 c += 1
             except KeyError:
                 pass
