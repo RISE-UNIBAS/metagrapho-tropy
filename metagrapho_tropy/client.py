@@ -14,8 +14,7 @@ import logging
 import os.path
 import time
 
-
-DEBUG = False
+DEBUG = True
 
 
 @dataclass
@@ -65,6 +64,9 @@ class Client:
 
     @staticmethod
     def _validate(tropy_file_path: str,
+                  tropy_save_path: str = None,
+                  mapping_file_path: str = None,
+                  mapping_save_path: str = None,
                   item_type: str = None,
                   item_tag: str = None,
                   item_image_index: int = None,
@@ -72,9 +74,11 @@ class Client:
                   atr_model_id: int = None,
                   lowest_common_dir: str = None,
                   ) -> Tropy:
-        """ Validate and initialize user input.
+        """ Validate user input and initialize Tropy instance.
 
-        :param tropy_file_path: complete path to Tropy export file including filename and extension
+        :param tropy_file_path: complete path to Tropy export file including file extension
+        :param tropy_save_path: complete path to updated Tropy save file including file extension, defaults to None
+        :param mapping_save_path: complete path to CSV mapping save file including file extension, defaults to None
         :param item_type: the item type, defaults to None
         :param item_tag: the item tag, defaults to None
         :param item_image_index: the selected item's index, defaults to None
@@ -93,6 +97,15 @@ class Client:
                 f"Invalid 'tropy_file_path' parameter: file '{tropy_file_path}' is not a valid Tropy export "
                 f"file!")
             raise
+        if tropy_save_path is not None:
+            pass
+            # TODO: add validation for tropy_save_path
+        if mapping_file_path is not None:
+            pass
+            # TODO: add validation for mapping_file_path
+        if mapping_save_path is not None:
+            pass
+            # TODO: add validation for mapping_save_path
         if item_type is not None:
             try:
                 assert item_type in tropy.get_types()
@@ -157,9 +170,42 @@ class Client:
             logging.exception("Unexpected exception.")
             raise
 
+    @staticmethod
+    def _load_mapping(mapping_file_path: str) -> dict:
+        """ Load mapping as dictionary with Tropy item ID as key and list of image index, processing ID as value. """
+
+        list_map = Utility.load_csv(file_path=mapping_file_path)
+        dict_map = dict()
+        for row in list_map[1:]:
+            dict_map[row[0]] = [row[1], row[2]]
+
+        return dict_map
+
+    def transform_coordinates(self,
+                              coordinates: str) -> None:
+        """ Transform Transkribus coordinates points to Tropy coordinates.
+
+        Sample Transkribus coordinates points: '192,458 192,514 332,514 332,458'. Read the tuple '192,
+        458' as 'x, y' where '0, 0' is the top left corner of an image. Note that the y-axis is inverted (going down
+        is positive). The coordinates describe a rectangle where the first tuple is bottom left, the second tuple is
+        bottom right, the third tuple is top right and the fourth tuple is top left.
+
+        Sample output coordinates:
+
+        :param coordinates: value of Transkribus 'coords' key
+        """
+
+        parsed_coordinates = coordinates.split(" ")
+
+        tropy_x =
+        tropy_y =
+        tropy_width =
+        tropy_height =
+
     def process_tropy(self,
                       tropy_file_path: str,
-                      tropy_file_save_path: str = None,
+                      tropy_save_path: str = None,
+                      mapping_save_path: str = None,
                       item_type: str = None,
                       item_tag: str = None,
                       item_image_index: int = None,
@@ -172,12 +218,14 @@ class Client:
         Provide a Tropy export JSON-LD file. Items are selected via type and tag (optional and conjunctive). If no
         selection is made, all items are enriched. Images are selected via their index. If no specific image is
         selected, image to text is applied to all images. Processed items get the tag "atr_processed" and are saved
-        to an updated JSON-LD file. The Transkribus Processing API generates the transcription based on a layout
-        detection model and an ATR model, both customizable via their IDs. If the Tropy image paths do not correspond
-        to the image paths on the machine running this module, provide the losest common directory shared by both paths.
+        to an updated JSON-LD file; in addition, there is a CSV file mapping items to processing IDs. The Transkribus
+        Processing API generates the transcription based on a layout detection model and an ATR model,
+        both customizable via their IDs. If the Tropy image paths do not correspond to the image paths on the machine
+        running this module, provide the losest common directory shared by both paths.
 
         :param tropy_file_path: complete path to Tropy export file including file extension
-        :param tropy_file_save_path: complete path to updated Tropy save file including file extension, defaults to None
+        :param tropy_save_path: complete path to updated Tropy save file including file extension, defaults to None
+        :param mapping_save_path: complete path to CSV mapping save file including file extension, defaults to None
         :param item_type: the item type, defaults to None
         :param item_tag: the item tag, defaults to None
         :param item_image_index: the selected item's index, defaults to None
@@ -187,19 +235,16 @@ class Client:
         """
 
         tropy = self._validate(tropy_file_path=tropy_file_path,
+                               tropy_save_path=tropy_save_path,
+                               mapping_save_path=mapping_save_path,
                                item_type=item_type,
                                item_tag=item_tag,
                                item_image_index=item_image_index,
                                line_model_id=line_model_id,
                                atr_model_id=atr_model_id,
                                lowest_common_dir=lowest_common_dir)
-        debug_counter = 0
+
         for item in tropy.graph:
-
-            if DEBUG is True:
-                if debug_counter > 1:
-                    continue
-
             parsed_item = Item()
             parsed_item.copy_metadata_from_dict(item)
 
@@ -240,20 +285,67 @@ class Client:
             except KeyError:
                 item["tag"] = ["atr_processed"]
             logging.info(f"Item {parsed_item.identifier} processed.")
-            debug_counter += 1
 
-        time_str = time.strftime("%Y%m%d-%H%M%S")
-        csv_file_path = f"processing_data_{time_str}.csv"
+        if mapping_save_path is None:
+            mapping_save_path = f"mapping_{time.strftime('%Y%m%d-%H%M%S')}.csv"
         Utility.save_csv(header=["item_id", "image_index", "process_id"],
                          data=self.processing_data,
-                         file_path=csv_file_path)
-        logging.info(f"Map of map of item IDs to Transkribus metagrapho API processing IDs saved to {csv_file_path}.")
+                         file_path=mapping_save_path)
+        logging.info(
+            f"Map of map of item IDs to Transkribus metagrapho API processing IDs saved to {mapping_save_path}.")
 
-        if tropy_file_save_path is None:
-            tropy_file_save_path = "".join(tropy_file_path.split(".")[:-1] + [f"_updated_{time_str}.json"])
+        if tropy_save_path is None:
+            tropy_save_path = "".join(
+                tropy_file_path.split(".")[:-1] + [f"_updated_{time.strftime('%Y%m%d-%H%M%S')}.json"])
         Utility.save_json(data=tropy.json_export,
-                          file_path=tropy_file_save_path)
-        logging.info(f"Updated Tropy export JSON-LD file saved to {tropy_file_save_path}.")
+                          file_path=tropy_save_path)
+        logging.info(f"Updated Tropy export JSON-LD file saved to {tropy_save_path}.")
+
+    def enrich_tropy(self,
+                     tropy_file_path: str,
+                     mapping_file_path: str,
+                     tropy_save_path: str = None,
+                     ) -> None:
+        """ Enrich
+
+        :param tropy_file_path: complete path to Tropy export file including file extension
+        :param mapping_file_path: complete path to CSV mapping file including file extension
+        :param tropy_save_path: complete path to enriched Tropy save file including file extension, defaults to None
+        """
+
+        tropy = self._validate(tropy_file_path=tropy_file_path,
+                               mapping_file_path=mapping_file_path,
+                               tropy_save_path=tropy_save_path)
+
+        mapping = self._load_mapping(mapping_file_path=mapping_file_path)
+
+        c = 0
+
+        for item in tropy.graph:
+
+            if DEBUG is True:
+                if c > 5:
+                    continue
+
+            parsed_item = Item()
+            parsed_item.copy_metadata_from_dict(item)
+
+            try:
+                processing_id = mapping[parsed_item.identifier][1]
+                result = self.api.get_result(processing_id)
+                logging.info(f"Item {parsed_item.identifier} with {result}.")
+                print(parsed_item.identifier)
+                print(result.json())
+                print(result.json()["content"]["text"])
+                c += 1
+            except KeyError:
+                pass
+
+
+
+
+
+
 
     def get_response(self,
                      processing_id: int

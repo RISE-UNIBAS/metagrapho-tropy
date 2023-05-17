@@ -36,6 +36,16 @@ class Utility:
             dump(data, file, indent=4)
 
     @staticmethod
+    def load_csv(file_path: str) -> list:
+        """ Load CSV from file as list.
+
+        :param file_path: complete path to file including filename and extension
+        """
+
+        with open(file_path, "r") as file:
+            return [line for line in csv.reader(file)]
+
+    @staticmethod
     def save_csv(header: List,
                  data: List,
                  file_path: str) -> None:

@@ -1,0 +1,999 @@
+FUNCTION RUN as main: Client().process_tropy(tropy_file_path=f"{TEST}/sample_input.json", item_type="Foto", item_image_index=1)
+2023-05-16 21:58:16,112 INFO:root:Started
+2023-05-16 21:58:16,115 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): account.readcoop.eu:443
+2023-05-16 21:58:16,279 DEBUG:urllib3.connectionpool:https://account.readcoop.eu:443 "POST /auth/realms/readcoop/protocol/openid-connect/token HTTP/1.1" 200 2437
+2023-05-16 21:58:16,314 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:16,819 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:16,819 INFO:root:Item B0340 image 1 has process ID 4995877.
+2023-05-16 21:58:16,821 INFO:root:Item B0340 processed.
+2023-05-16 21:58:16,824 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:17,266 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:17,267 INFO:root:Item F0001 image 1 has process ID 4995878.
+2023-05-16 21:58:17,268 INFO:root:Item F0001 processed.
+2023-05-16 21:58:17,278 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:18,122 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:18,122 INFO:root:Item F0002 image 1 has process ID 4995879.
+2023-05-16 21:58:18,124 INFO:root:Item F0002 processed.
+2023-05-16 21:58:18,134 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:18,654 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:18,655 INFO:root:Item F0003 image 1 has process ID 4995880.
+2023-05-16 21:58:18,656 INFO:root:Item F0003 processed.
+2023-05-16 21:58:18,663 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:19,450 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:19,450 INFO:root:Item F0004 image 1 has process ID 4995881.
+2023-05-16 21:58:19,452 INFO:root:Item F0004 processed.
+2023-05-16 21:58:19,457 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:20,683 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:20,683 INFO:root:Item F0005 image 1 has process ID 4995882.
+2023-05-16 21:58:20,685 INFO:root:Item F0005 processed.
+2023-05-16 21:58:20,694 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:22,399 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:22,399 INFO:root:Item F0006 image 1 has process ID 4995883.
+2023-05-16 21:58:22,400 INFO:root:Item F0006 processed.
+2023-05-16 21:58:22,410 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:23,078 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:23,079 INFO:root:Item F0007 image 1 has process ID 4995884.
+2023-05-16 21:58:23,080 INFO:root:Item F0007 processed.
+2023-05-16 21:58:23,085 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:23,690 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:23,691 INFO:root:Item F0008 image 1 has process ID 4995885.
+2023-05-16 21:58:23,692 INFO:root:Item F0008 processed.
+2023-05-16 21:58:23,700 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:24,203 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:24,204 INFO:root:Item F0009 image 1 has process ID 4995886.
+2023-05-16 21:58:24,205 INFO:root:Item F0009 processed.
+2023-05-16 21:58:24,213 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:24,686 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:24,686 INFO:root:Item F0010 image 1 has process ID 4995887.
+2023-05-16 21:58:24,687 INFO:root:Item F0010 processed.
+2023-05-16 21:58:24,692 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:25,214 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:25,215 INFO:root:Item F0011 image 1 has process ID 4995888.
+2023-05-16 21:58:25,216 INFO:root:Item F0011 processed.
+2023-05-16 21:58:25,222 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:25,700 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:25,700 INFO:root:Item F0012 image 1 has process ID 4995890.
+2023-05-16 21:58:25,702 INFO:root:Item F0012 processed.
+2023-05-16 21:58:25,714 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:26,593 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:26,594 INFO:root:Item F0013 image 1 has process ID 4995891.
+2023-05-16 21:58:26,595 INFO:root:Item F0013 processed.
+2023-05-16 21:58:26,603 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:27,059 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:27,060 INFO:root:Item F0014 image 1 has process ID 4995892.
+2023-05-16 21:58:27,061 INFO:root:Item F0014 processed.
+2023-05-16 21:58:27,069 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:27,576 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:27,577 INFO:root:Item F0015 image 1 has process ID 4995893.
+2023-05-16 21:58:27,578 INFO:root:Item F0015 processed.
+2023-05-16 21:58:27,587 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:28,090 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:28,090 INFO:root:Item F0016 image 1 has process ID 4995894.
+2023-05-16 21:58:28,092 INFO:root:Item F0016 processed.
+2023-05-16 21:58:28,100 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:28,623 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:28,623 INFO:root:Item F0017 image 1 has process ID 4995895.
+2023-05-16 21:58:28,624 INFO:root:Item F0017 processed.
+2023-05-16 21:58:28,634 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:29,287 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:29,287 INFO:root:Item F0018 image 1 has process ID 4995896.
+2023-05-16 21:58:29,289 INFO:root:Item F0018 processed.
+2023-05-16 21:58:29,297 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:29,758 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:29,758 INFO:root:Item F0019 image 1 has process ID 4995897.
+2023-05-16 21:58:29,760 INFO:root:Item F0019 processed.
+2023-05-16 21:58:29,769 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:30,483 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:30,483 INFO:root:Item F0020 image 1 has process ID 4995898.
+2023-05-16 21:58:30,485 INFO:root:Item F0020 processed.
+2023-05-16 21:58:30,493 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:30,985 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:30,986 INFO:root:Item F0021 image 1 has process ID 4995899.
+2023-05-16 21:58:30,987 INFO:root:Item F0021 processed.
+2023-05-16 21:58:30,997 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:31,833 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:31,834 INFO:root:Item F0022 image 1 has process ID 4995900.
+2023-05-16 21:58:31,835 INFO:root:Item F0022 processed.
+2023-05-16 21:58:31,844 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:32,631 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:32,632 INFO:root:Item F0023 image 1 has process ID 4995901.
+2023-05-16 21:58:32,633 INFO:root:Item F0023 processed.
+2023-05-16 21:58:32,641 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:33,088 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:33,088 INFO:root:Item F0024 image 1 has process ID 4995902.
+2023-05-16 21:58:33,090 INFO:root:Item F0024 processed.
+2023-05-16 21:58:33,098 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:33,608 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:33,609 INFO:root:Item F0025 image 1 has process ID 4995903.
+2023-05-16 21:58:33,610 INFO:root:Item F0025 processed.
+2023-05-16 21:58:33,616 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:34,121 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:34,121 INFO:root:Item F0026 image 1 has process ID 4995904.
+2023-05-16 21:58:34,122 INFO:root:Item F0026 processed.
+2023-05-16 21:58:34,132 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:34,854 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:34,855 INFO:root:Item F0027 image 1 has process ID 4995905.
+2023-05-16 21:58:34,856 INFO:root:Item F0027 processed.
+2023-05-16 21:58:34,862 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:35,370 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:35,371 INFO:root:Item F0028 image 1 has process ID 4995906.
+2023-05-16 21:58:35,372 INFO:root:Item F0028 processed.
+2023-05-16 21:58:35,381 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:36,195 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:36,196 INFO:root:Item F0029 image 1 has process ID 4995907.
+2023-05-16 21:58:36,197 INFO:root:Item F0029 processed.
+2023-05-16 21:58:36,203 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:36,563 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:36,563 INFO:root:Item F0030 image 1 has process ID 4995908.
+2023-05-16 21:58:36,564 INFO:root:Item F0030 processed.
+2023-05-16 21:58:36,576 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:37,134 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:37,134 INFO:root:Item F0031 image 1 has process ID 4995909.
+2023-05-16 21:58:37,136 INFO:root:Item F0031 processed.
+2023-05-16 21:58:37,147 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:37,705 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:37,706 INFO:root:Item F0032 image 1 has process ID 4995910.
+2023-05-16 21:58:37,707 INFO:root:Item F0032 processed.
+2023-05-16 21:58:37,716 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:38,271 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:38,271 INFO:root:Item F0033 image 1 has process ID 4995911.
+2023-05-16 21:58:38,273 INFO:root:Item F0033 processed.
+2023-05-16 21:58:38,283 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:38,800 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:38,801 INFO:root:Item F0034 image 1 has process ID 4995912.
+2023-05-16 21:58:38,802 INFO:root:Item F0034 processed.
+2023-05-16 21:58:38,813 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:39,619 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:39,620 INFO:root:Item F0035 image 1 has process ID 4995913.
+2023-05-16 21:58:39,621 INFO:root:Item F0035 processed.
+2023-05-16 21:58:39,633 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:40,208 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:40,208 INFO:root:Item F0036 image 1 has process ID 4995914.
+2023-05-16 21:58:40,210 INFO:root:Item F0036 processed.
+2023-05-16 21:58:40,217 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:40,733 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:40,734 INFO:root:Item F0037 image 1 has process ID 4995915.
+2023-05-16 21:58:40,736 INFO:root:Item F0037 processed.
+2023-05-16 21:58:40,747 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:41,445 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:41,446 INFO:root:Item F0038 image 1 has process ID 4995916.
+2023-05-16 21:58:41,447 INFO:root:Item F0038 processed.
+2023-05-16 21:58:41,458 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:41,989 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:41,989 INFO:root:Item F0039 image 1 has process ID 4995917.
+2023-05-16 21:58:41,991 INFO:root:Item F0039 processed.
+2023-05-16 21:58:42,000 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:42,511 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:42,512 INFO:root:Item F0040 image 1 has process ID 4995918.
+2023-05-16 21:58:42,513 INFO:root:Item F0040 processed.
+2023-05-16 21:58:42,523 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:43,049 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:43,050 INFO:root:Item F0041 image 1 has process ID 4995919.
+2023-05-16 21:58:43,051 INFO:root:Item F0041 processed.
+2023-05-16 21:58:43,062 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:43,896 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:43,896 INFO:root:Item F0042 image 1 has process ID 4995920.
+2023-05-16 21:58:43,898 INFO:root:Item F0042 processed.
+2023-05-16 21:58:43,909 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:44,713 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:44,713 INFO:root:Item F0043 image 1 has process ID 4995922.
+2023-05-16 21:58:44,714 INFO:root:Item F0043 processed.
+2023-05-16 21:58:44,726 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:45,562 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:45,562 INFO:root:Item F0044 image 1 has process ID 4995923.
+2023-05-16 21:58:45,563 INFO:root:Item F0044 processed.
+2023-05-16 21:58:45,574 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:46,123 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:46,124 INFO:root:Item F0045 image 1 has process ID 4995924.
+2023-05-16 21:58:46,125 INFO:root:Item F0045 processed.
+2023-05-16 21:58:46,136 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:46,687 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:46,687 INFO:root:Item F0046 image 1 has process ID 4995925.
+2023-05-16 21:58:46,689 INFO:root:Item F0046 processed.
+2023-05-16 21:58:46,700 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:47,487 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:47,488 INFO:root:Item F0047 image 1 has process ID 4995926.
+2023-05-16 21:58:47,489 INFO:root:Item F0047 processed.
+2023-05-16 21:58:47,499 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:48,297 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:48,298 INFO:root:Item F0048 image 1 has process ID 4995927.
+2023-05-16 21:58:48,299 INFO:root:Item F0048 processed.
+2023-05-16 21:58:48,310 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:49,114 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:49,114 INFO:root:Item F0049 image 1 has process ID 4995928.
+2023-05-16 21:58:49,115 INFO:root:Item F0049 processed.
+2023-05-16 21:58:49,126 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:49,890 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:49,890 INFO:root:Item F0050 image 1 has process ID 4995930.
+2023-05-16 21:58:49,892 INFO:root:Item F0050 processed.
+2023-05-16 21:58:49,903 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:50,433 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:50,434 INFO:root:Item F0051 image 1 has process ID 4995931.
+2023-05-16 21:58:50,435 INFO:root:Item F0051 processed.
+2023-05-16 21:58:50,446 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:51,296 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:51,296 INFO:root:Item F0052 image 1 has process ID 4995932.
+2023-05-16 21:58:51,298 INFO:root:Item F0052 processed.
+2023-05-16 21:58:51,306 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:51,857 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:51,857 INFO:root:Item F0053 image 1 has process ID 4995933.
+2023-05-16 21:58:51,859 INFO:root:Item F0053 processed.
+2023-05-16 21:58:51,870 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:52,420 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:52,420 INFO:root:Item F0054 image 1 has process ID 4995934.
+2023-05-16 21:58:52,422 INFO:root:Item F0054 processed.
+2023-05-16 21:58:52,431 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:52,974 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:52,975 INFO:root:Item F0055 image 1 has process ID 4995935.
+2023-05-16 21:58:52,976 INFO:root:Item F0055 processed.
+2023-05-16 21:58:52,986 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:53,490 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:53,490 INFO:root:Item F0056 image 1 has process ID 4995936.
+2023-05-16 21:58:53,492 INFO:root:Item F0056 processed.
+2023-05-16 21:58:53,499 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:53,960 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:53,960 INFO:root:Item F0057 image 1 has process ID 4995937.
+2023-05-16 21:58:53,963 INFO:root:Item F0057 processed.
+2023-05-16 21:58:53,971 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:54,445 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:54,446 INFO:root:Item F0058 image 1 has process ID 4995938.
+2023-05-16 21:58:54,447 INFO:root:Item F0058 processed.
+2023-05-16 21:58:54,453 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:54,919 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:54,920 INFO:root:Item F0059 image 1 has process ID 4995939.
+2023-05-16 21:58:54,921 INFO:root:Item F0059 processed.
+2023-05-16 21:58:54,929 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:55,389 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:55,389 INFO:root:Item F0060 image 1 has process ID 4995940.
+2023-05-16 21:58:55,391 INFO:root:Item F0060 processed.
+2023-05-16 21:58:55,396 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:55,862 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:55,862 INFO:root:Item F0061 image 1 has process ID 4995941.
+2023-05-16 21:58:55,863 INFO:root:Item F0061 processed.
+2023-05-16 21:58:55,871 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:56,335 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:56,335 INFO:root:Item F0062 image 1 has process ID 4995942.
+2023-05-16 21:58:56,337 INFO:root:Item F0062 processed.
+2023-05-16 21:58:56,344 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:56,828 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:56,828 INFO:root:Item F0063 image 1 has process ID 4995943.
+2023-05-16 21:58:56,830 INFO:root:Item F0063 processed.
+2023-05-16 21:58:56,835 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:57,302 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:57,302 INFO:root:Item F0064 image 1 has process ID 4995944.
+2023-05-16 21:58:57,304 INFO:root:Item F0064 processed.
+2023-05-16 21:58:57,309 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:57,795 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:57,795 INFO:root:Item F0065 image 1 has process ID 4995945.
+2023-05-16 21:58:57,797 INFO:root:Item F0065 processed.
+2023-05-16 21:58:57,801 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:58,258 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:58,258 INFO:root:Item F0066 image 1 has process ID 4995946.
+2023-05-16 21:58:58,260 INFO:root:Item F0066 processed.
+2023-05-16 21:58:58,263 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:58,674 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:58,674 INFO:root:Item F0067 image 1 has process ID 4995947.
+2023-05-16 21:58:58,676 INFO:root:Item F0067 processed.
+2023-05-16 21:58:58,679 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:59,113 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:59,114 INFO:root:Item F0068 image 1 has process ID 4995948.
+2023-05-16 21:58:59,115 INFO:root:Item F0068 processed.
+2023-05-16 21:58:59,122 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:59,519 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:59,520 INFO:root:Item F0069 image 1 has process ID 4995949.
+2023-05-16 21:58:59,521 INFO:root:Item F0069 processed.
+2023-05-16 21:58:59,527 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:58:59,929 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:58:59,929 INFO:root:Item F0070 image 1 has process ID 4995950.
+2023-05-16 21:58:59,931 INFO:root:Item F0070 processed.
+2023-05-16 21:58:59,934 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:00,328 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:00,328 INFO:root:Item F0071 image 1 has process ID 4995951.
+2023-05-16 21:59:00,330 INFO:root:Item F0071 processed.
+2023-05-16 21:59:00,333 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:00,725 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:00,726 INFO:root:Item F0072 image 1 has process ID 4995952.
+2023-05-16 21:59:00,727 INFO:root:Item F0072 processed.
+2023-05-16 21:59:00,733 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:01,163 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:01,163 INFO:root:Item F0073 image 1 has process ID 4995953.
+2023-05-16 21:59:01,165 INFO:root:Item F0073 processed.
+2023-05-16 21:59:01,168 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:01,597 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:01,598 INFO:root:Item F0074 image 1 has process ID 4995954.
+2023-05-16 21:59:01,599 INFO:root:Item F0074 processed.
+2023-05-16 21:59:01,605 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:02,008 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:02,008 INFO:root:Item F0075 image 1 has process ID 4995955.
+2023-05-16 21:59:02,010 INFO:root:Item F0075 processed.
+2023-05-16 21:59:02,016 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:02,469 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:02,469 INFO:root:Item F0076 image 1 has process ID 4995956.
+2023-05-16 21:59:02,470 INFO:root:Item F0076 processed.
+2023-05-16 21:59:02,477 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:02,935 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:02,935 INFO:root:Item F0077 image 1 has process ID 4995957.
+2023-05-16 21:59:02,937 INFO:root:Item F0077 processed.
+2023-05-16 21:59:02,939 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:03,408 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:03,408 INFO:root:Item F0078 image 1 has process ID 4995958.
+2023-05-16 21:59:03,409 INFO:root:Item F0078 processed.
+2023-05-16 21:59:03,415 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:03,890 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 65
+2023-05-16 21:59:03,890 INFO:root:Item F0079 image 1 has process ID 4995959.
+2023-05-16 21:59:03,892 INFO:root:Item F0079 processed.
+2023-05-16 21:59:03,895 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:04,288 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:04,288 INFO:root:Item F0080 image 1 has process ID 4995960.
+2023-05-16 21:59:04,290 INFO:root:Item F0080 processed.
+2023-05-16 21:59:04,295 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:04,716 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:04,716 INFO:root:Item F0081 image 1 has process ID 4995961.
+2023-05-16 21:59:04,718 INFO:root:Item F0081 processed.
+2023-05-16 21:59:04,724 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:05,163 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:05,163 INFO:root:Item F0082 image 1 has process ID 4995962.
+2023-05-16 21:59:05,165 INFO:root:Item F0082 processed.
+2023-05-16 21:59:05,168 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:05,646 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:05,646 INFO:root:Item F0083 image 1 has process ID 4995963.
+2023-05-16 21:59:05,648 INFO:root:Item F0083 processed.
+2023-05-16 21:59:05,655 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:06,114 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:06,114 INFO:root:Item F0084 image 1 has process ID 4995965.
+2023-05-16 21:59:06,115 INFO:root:Item F0084 processed.
+2023-05-16 21:59:06,121 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:06,555 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:06,555 INFO:root:Item F0085 image 1 has process ID 4995966.
+2023-05-16 21:59:06,556 INFO:root:Item F0085 processed.
+2023-05-16 21:59:06,560 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:06,972 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:06,972 INFO:root:Item F0086 image 1 has process ID 4995967.
+2023-05-16 21:59:06,974 INFO:root:Item F0086 processed.
+2023-05-16 21:59:06,980 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:07,399 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:07,399 INFO:root:Item F0087 image 1 has process ID 4995968.
+2023-05-16 21:59:07,401 INFO:root:Item F0087 processed.
+2023-05-16 21:59:07,406 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:07,829 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:07,829 INFO:root:Item F0088 image 1 has process ID 4995969.
+2023-05-16 21:59:07,831 INFO:root:Item F0088 processed.
+2023-05-16 21:59:07,834 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:08,266 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:08,266 INFO:root:Item F0089 image 1 has process ID 4995970.
+2023-05-16 21:59:08,267 INFO:root:Item F0089 processed.
+2023-05-16 21:59:08,275 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:08,742 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:08,743 INFO:root:Item F0090 image 1 has process ID 4995971.
+2023-05-16 21:59:08,744 INFO:root:Item F0090 processed.
+2023-05-16 21:59:08,751 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:09,238 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:09,238 INFO:root:Item F0091 image 1 has process ID 4995972.
+2023-05-16 21:59:09,239 INFO:root:Item F0091 processed.
+2023-05-16 21:59:09,246 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:09,689 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:09,690 INFO:root:Item F0092 image 1 has process ID 4995973.
+2023-05-16 21:59:09,691 INFO:root:Item F0092 processed.
+2023-05-16 21:59:09,698 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:10,159 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:10,159 INFO:root:Item F0093 image 1 has process ID 4995974.
+2023-05-16 21:59:10,161 INFO:root:Item F0093 processed.
+2023-05-16 21:59:10,164 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:10,594 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:10,594 INFO:root:Item F0094 image 1 has process ID 4995975.
+2023-05-16 21:59:10,595 INFO:root:Item F0094 processed.
+2023-05-16 21:59:10,602 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:11,154 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:11,154 INFO:root:Item F0095 image 1 has process ID 4995977.
+2023-05-16 21:59:11,155 INFO:root:Item F0095 processed.
+2023-05-16 21:59:11,162 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:11,621 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:11,622 INFO:root:Item F0096 image 1 has process ID 4995978.
+2023-05-16 21:59:11,623 INFO:root:Item F0096 processed.
+2023-05-16 21:59:11,628 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:12,120 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:12,120 INFO:root:Item F0097 image 1 has process ID 4995979.
+2023-05-16 21:59:12,122 INFO:root:Item F0097 processed.
+2023-05-16 21:59:12,127 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:12,539 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:12,540 INFO:root:Item F0098 image 1 has process ID 4995980.
+2023-05-16 21:59:12,541 INFO:root:Item F0098 processed.
+2023-05-16 21:59:12,548 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:13,083 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:13,083 INFO:root:Item F0099 image 1 has process ID 4995981.
+2023-05-16 21:59:13,085 INFO:root:Item F0099 processed.
+2023-05-16 21:59:13,088 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:13,520 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:13,521 INFO:root:Item F0100 image 1 has process ID 4995982.
+2023-05-16 21:59:13,523 INFO:root:Item F0100 processed.
+2023-05-16 21:59:13,529 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:14,584 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:14,584 INFO:root:Item F0101 image 1 has process ID 4995983.
+2023-05-16 21:59:14,585 INFO:root:Item F0101 processed.
+2023-05-16 21:59:14,588 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:15,019 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:15,019 INFO:root:Item F0102 image 1 has process ID 4995984.
+2023-05-16 21:59:15,021 INFO:root:Item F0102 processed.
+2023-05-16 21:59:15,027 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:15,435 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:15,436 INFO:root:Item F0103 image 1 has process ID 4995985.
+2023-05-16 21:59:15,437 INFO:root:Item F0103 processed.
+2023-05-16 21:59:15,443 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:15,866 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:15,867 INFO:root:Item F0104 image 1 has process ID 4995986.
+2023-05-16 21:59:15,868 INFO:root:Item F0104 processed.
+2023-05-16 21:59:15,871 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:16,309 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:16,309 INFO:root:Item F0105 image 1 has process ID 4995987.
+2023-05-16 21:59:16,311 INFO:root:Item F0105 processed.
+2023-05-16 21:59:16,317 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:16,726 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:16,726 INFO:root:Item F0106 image 1 has process ID 4995988.
+2023-05-16 21:59:16,728 INFO:root:Item F0106 processed.
+2023-05-16 21:59:16,733 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:17,124 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:17,124 INFO:root:Item F0107 image 1 has process ID 4995989.
+2023-05-16 21:59:17,126 INFO:root:Item F0107 processed.
+2023-05-16 21:59:17,131 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:17,548 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:17,548 INFO:root:Item F0108 image 1 has process ID 4995990.
+2023-05-16 21:59:17,549 INFO:root:Item F0108 processed.
+2023-05-16 21:59:17,555 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:17,967 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:17,967 INFO:root:Item F0109 image 1 has process ID 4995991.
+2023-05-16 21:59:17,968 INFO:root:Item F0109 processed.
+2023-05-16 21:59:17,972 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:18,396 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:18,396 INFO:root:Item F0110 image 1 has process ID 4995992.
+2023-05-16 21:59:18,398 INFO:root:Item F0110 processed.
+2023-05-16 21:59:18,404 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:18,774 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:18,775 INFO:root:Item F0111 image 1 has process ID 4995993.
+2023-05-16 21:59:18,776 INFO:root:Item F0111 processed.
+2023-05-16 21:59:18,782 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:19,221 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:19,221 INFO:root:Item F0112 image 1 has process ID 4995994.
+2023-05-16 21:59:19,223 INFO:root:Item F0112 processed.
+2023-05-16 21:59:19,230 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:19,649 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 65
+2023-05-16 21:59:19,649 INFO:root:Item F0113 image 1 has process ID 4995995.
+2023-05-16 21:59:19,651 INFO:root:Item F0113 processed.
+2023-05-16 21:59:19,654 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:20,096 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:20,096 INFO:root:Item F0114 image 1 has process ID 4995996.
+2023-05-16 21:59:20,097 INFO:root:Item F0114 processed.
+2023-05-16 21:59:20,101 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:20,542 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:20,542 INFO:root:Item F0115 image 1 has process ID 4995997.
+2023-05-16 21:59:20,544 INFO:root:Item F0115 processed.
+2023-05-16 21:59:20,552 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:20,998 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:20,998 INFO:root:Item F0116 image 1 has process ID 4995998.
+2023-05-16 21:59:20,999 INFO:root:Item F0116 processed.
+2023-05-16 21:59:21,007 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:21,456 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:21,456 INFO:root:Item F0117 image 1 has process ID 4995999.
+2023-05-16 21:59:21,457 INFO:root:Item F0117 processed.
+2023-05-16 21:59:21,461 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:21,918 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:21,918 INFO:root:Item F0118 image 1 has process ID 4996000.
+2023-05-16 21:59:21,919 INFO:root:Item F0118 processed.
+2023-05-16 21:59:21,926 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:22,387 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:22,387 INFO:root:Item F0119 image 1 has process ID 4996001.
+2023-05-16 21:59:22,389 INFO:root:Item F0119 processed.
+2023-05-16 21:59:22,395 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:22,862 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:22,863 INFO:root:Item F0120 image 1 has process ID 4996002.
+2023-05-16 21:59:22,864 INFO:root:Item F0120 processed.
+2023-05-16 21:59:22,868 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:23,359 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:23,360 INFO:root:Item F0121 image 1 has process ID 4996003.
+2023-05-16 21:59:23,361 INFO:root:Item F0121 processed.
+2023-05-16 21:59:23,368 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:24,293 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:24,293 INFO:root:Item F0122 image 1 has process ID 4996004.
+2023-05-16 21:59:24,295 INFO:root:Item F0122 processed.
+2023-05-16 21:59:24,301 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:25,189 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:25,189 INFO:root:Item F0123 image 1 has process ID 4996005.
+2023-05-16 21:59:25,191 INFO:root:Item F0123 processed.
+2023-05-16 21:59:25,194 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:26,013 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:26,014 INFO:root:Item F0124 image 1 has process ID 4996006.
+2023-05-16 21:59:26,016 INFO:root:Item F0124 processed.
+2023-05-16 21:59:26,023 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:26,501 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:26,501 INFO:root:Item F0125 image 1 has process ID 4996008.
+2023-05-16 21:59:26,503 INFO:root:Item F0125 processed.
+2023-05-16 21:59:26,510 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:26,950 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:26,950 INFO:root:Item F0126 image 1 has process ID 4996009.
+2023-05-16 21:59:26,951 INFO:root:Item F0126 processed.
+2023-05-16 21:59:26,957 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:27,473 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:27,473 INFO:root:Item F0127 image 1 has process ID 4996010.
+2023-05-16 21:59:27,474 INFO:root:Item F0127 processed.
+2023-05-16 21:59:27,481 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:27,939 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:27,939 INFO:root:Item F0128 image 1 has process ID 4996011.
+2023-05-16 21:59:27,940 INFO:root:Item F0128 processed.
+2023-05-16 21:59:27,947 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:28,400 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:28,400 INFO:root:Item F0129 image 1 has process ID 4996012.
+2023-05-16 21:59:28,402 INFO:root:Item F0129 processed.
+2023-05-16 21:59:28,408 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:28,871 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:28,871 INFO:root:Item F0130 image 1 has process ID 4996013.
+2023-05-16 21:59:28,872 INFO:root:Item F0130 processed.
+2023-05-16 21:59:28,878 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:29,281 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:29,282 INFO:root:Item F0131 image 1 has process ID 4996014.
+2023-05-16 21:59:29,283 INFO:root:Item F0131 processed.
+2023-05-16 21:59:29,289 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:29,743 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:29,744 INFO:root:Item F0132 image 1 has process ID 4996015.
+2023-05-16 21:59:29,745 INFO:root:Item F0132 processed.
+2023-05-16 21:59:29,752 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:30,219 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:30,220 INFO:root:Item F0133 image 1 has process ID 4996016.
+2023-05-16 21:59:30,221 INFO:root:Item F0133 processed.
+2023-05-16 21:59:30,225 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:30,637 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:30,638 INFO:root:Item F0134 image 1 has process ID 4996017.
+2023-05-16 21:59:30,639 INFO:root:Item F0134 processed.
+2023-05-16 21:59:30,642 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:31,076 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:31,077 INFO:root:Item F0135 image 1 has process ID 4996018.
+2023-05-16 21:59:31,078 INFO:root:Item F0135 processed.
+2023-05-16 21:59:31,083 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:31,487 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:31,488 INFO:root:Item F0136 image 1 has process ID 4996019.
+2023-05-16 21:59:31,489 INFO:root:Item F0136 processed.
+2023-05-16 21:59:31,495 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:31,902 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:31,903 INFO:root:Item F0137 image 1 has process ID 4996020.
+2023-05-16 21:59:31,904 INFO:root:Item F0137 processed.
+2023-05-16 21:59:31,909 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:32,363 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:32,364 INFO:root:Item F0138 image 1 has process ID 4996021.
+2023-05-16 21:59:32,365 INFO:root:Item F0138 processed.
+2023-05-16 21:59:32,368 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:32,817 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:32,818 INFO:root:Item F0139 image 1 has process ID 4996022.
+2023-05-16 21:59:32,819 INFO:root:Item F0139 processed.
+2023-05-16 21:59:32,826 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:33,239 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:33,239 INFO:root:Item F0140 image 1 has process ID 4996023.
+2023-05-16 21:59:33,241 INFO:root:Item F0140 processed.
+2023-05-16 21:59:33,248 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:33,700 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:33,700 INFO:root:Item F0141 image 1 has process ID 4996024.
+2023-05-16 21:59:33,701 INFO:root:Item F0141 processed.
+2023-05-16 21:59:33,704 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:34,143 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:34,144 INFO:root:Item F0142 image 1 has process ID 4996025.
+2023-05-16 21:59:34,145 INFO:root:Item F0142 processed.
+2023-05-16 21:59:34,152 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:34,598 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:34,598 INFO:root:Item F0143 image 1 has process ID 4996026.
+2023-05-16 21:59:34,599 INFO:root:Item F0143 processed.
+2023-05-16 21:59:34,606 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:35,028 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:35,028 INFO:root:Item F0144 image 1 has process ID 4996027.
+2023-05-16 21:59:35,029 INFO:root:Item F0144 processed.
+2023-05-16 21:59:35,036 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:35,641 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:35,641 INFO:root:Item F0145 image 1 has process ID 4996028.
+2023-05-16 21:59:35,643 INFO:root:Item F0145 processed.
+2023-05-16 21:59:35,649 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:36,113 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:36,114 INFO:root:Item F0146 image 1 has process ID 4996029.
+2023-05-16 21:59:36,115 INFO:root:Item F0146 processed.
+2023-05-16 21:59:36,121 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:36,545 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:36,545 INFO:root:Item F0147 image 1 has process ID 4996030.
+2023-05-16 21:59:36,546 INFO:root:Item F0147 processed.
+2023-05-16 21:59:36,550 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:37,021 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:37,022 INFO:root:Item F0148 image 1 has process ID 4996031.
+2023-05-16 21:59:37,023 INFO:root:Item F0148 processed.
+2023-05-16 21:59:37,035 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:37,590 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:37,590 INFO:root:Item F0149 image 1 has process ID 4996032.
+2023-05-16 21:59:37,592 INFO:root:Item F0149 processed.
+2023-05-16 21:59:37,599 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:38,110 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:38,110 INFO:root:Item F0150 image 1 has process ID 4996033.
+2023-05-16 21:59:38,111 INFO:root:Item F0150 processed.
+2023-05-16 21:59:38,122 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:38,644 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:38,645 INFO:root:Item F0151 image 1 has process ID 4996034.
+2023-05-16 21:59:38,646 INFO:root:Item F0151 processed.
+2023-05-16 21:59:38,656 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:39,153 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:39,153 INFO:root:Item F0152 image 1 has process ID 4996035.
+2023-05-16 21:59:39,154 INFO:root:Item F0152 processed.
+2023-05-16 21:59:39,161 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:39,727 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:39,728 INFO:root:Item F0153 image 1 has process ID 4996036.
+2023-05-16 21:59:39,729 INFO:root:Item F0153 processed.
+2023-05-16 21:59:39,740 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:40,263 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:40,263 INFO:root:Item F0154 image 1 has process ID 4996037.
+2023-05-16 21:59:40,265 INFO:root:Item F0154 processed.
+2023-05-16 21:59:40,271 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:40,803 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:40,804 INFO:root:Item F0155 image 1 has process ID 4996038.
+2023-05-16 21:59:40,805 INFO:root:Item F0155 processed.
+2023-05-16 21:59:40,815 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:41,334 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:41,335 INFO:root:Item F0156 image 1 has process ID 4996039.
+2023-05-16 21:59:41,336 INFO:root:Item F0156 processed.
+2023-05-16 21:59:41,341 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:41,979 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:41,979 INFO:root:Item F0157 image 1 has process ID 4996040.
+2023-05-16 21:59:41,981 INFO:root:Item F0157 processed.
+2023-05-16 21:59:41,988 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:42,531 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:42,531 INFO:root:Item F0158 image 1 has process ID 4996041.
+2023-05-16 21:59:42,532 INFO:root:Item F0158 processed.
+2023-05-16 21:59:42,542 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:43,103 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:43,103 INFO:root:Item F0159 image 1 has process ID 4996042.
+2023-05-16 21:59:43,104 INFO:root:Item F0159 processed.
+2023-05-16 21:59:43,110 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:43,694 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:43,695 INFO:root:Item F0160 image 1 has process ID 4996043.
+2023-05-16 21:59:43,696 INFO:root:Item F0160 processed.
+2023-05-16 21:59:43,705 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:44,319 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:44,319 INFO:root:Item F0161 image 1 has process ID 4996044.
+2023-05-16 21:59:44,321 INFO:root:Item F0161 processed.
+2023-05-16 21:59:44,329 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:44,809 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:44,809 INFO:root:Item F0162 image 1 has process ID 4996045.
+2023-05-16 21:59:44,811 INFO:root:Item F0162 processed.
+2023-05-16 21:59:44,815 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:45,284 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:45,285 INFO:root:Item F0164 image 1 has process ID 4996046.
+2023-05-16 21:59:45,286 INFO:root:Item F0164 processed.
+2023-05-16 21:59:45,290 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:45,753 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:45,754 INFO:root:Item F0165 image 1 has process ID 4996047.
+2023-05-16 21:59:45,755 INFO:root:Item F0165 processed.
+2023-05-16 21:59:45,766 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:46,336 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:46,336 INFO:root:Item F0166 image 1 has process ID 4996048.
+2023-05-16 21:59:46,337 INFO:root:Item F0166 processed.
+2023-05-16 21:59:46,343 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:46,905 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:46,905 INFO:root:Item F0167 image 1 has process ID 4996049.
+2023-05-16 21:59:46,906 INFO:root:Item F0167 processed.
+2023-05-16 21:59:46,919 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:47,483 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:47,483 INFO:root:Item F0168 image 1 has process ID 4996050.
+2023-05-16 21:59:47,485 INFO:root:Item F0168 processed.
+2023-05-16 21:59:47,492 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:48,068 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:48,069 INFO:root:Item F0169 image 1 has process ID 4996051.
+2023-05-16 21:59:48,070 INFO:root:Item F0169 processed.
+2023-05-16 21:59:48,079 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:48,611 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:48,611 INFO:root:Item F0170 image 1 has process ID 4996052.
+2023-05-16 21:59:48,613 INFO:root:Item F0170 processed.
+2023-05-16 21:59:48,620 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:49,157 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:49,157 INFO:root:Item F0171 image 1 has process ID 4996053.
+2023-05-16 21:59:49,158 INFO:root:Item F0171 processed.
+2023-05-16 21:59:49,167 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:49,738 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:49,739 INFO:root:Item F0172 image 1 has process ID 4996054.
+2023-05-16 21:59:49,740 INFO:root:Item F0172 processed.
+2023-05-16 21:59:49,746 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:50,154 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:50,155 INFO:root:Item F0173 image 1 has process ID 4996055.
+2023-05-16 21:59:50,156 INFO:root:Item F0173 processed.
+2023-05-16 21:59:50,163 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:50,695 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:50,695 INFO:root:Item F0174 image 1 has process ID 4996056.
+2023-05-16 21:59:50,696 INFO:root:Item F0174 processed.
+2023-05-16 21:59:50,705 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:51,248 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:51,248 INFO:root:Item F0175 image 1 has process ID 4996058.
+2023-05-16 21:59:51,250 INFO:root:Item F0175 processed.
+2023-05-16 21:59:51,258 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:51,761 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:51,761 INFO:root:Item F0176 image 1 has process ID 4996059.
+2023-05-16 21:59:51,763 INFO:root:Item F0176 processed.
+2023-05-16 21:59:51,771 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:52,257 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:52,257 INFO:root:Item F0177 image 1 has process ID 4996060.
+2023-05-16 21:59:52,258 INFO:root:Item F0177 processed.
+2023-05-16 21:59:52,267 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:52,804 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:52,805 INFO:root:Item F0178 image 1 has process ID 4996061.
+2023-05-16 21:59:52,806 INFO:root:Item F0178 processed.
+2023-05-16 21:59:52,814 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:53,335 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:53,335 INFO:root:Item F0179 image 1 has process ID 4996062.
+2023-05-16 21:59:53,337 INFO:root:Item F0179 processed.
+2023-05-16 21:59:53,346 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:53,874 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:53,874 INFO:root:Item F0180 image 1 has process ID 4996063.
+2023-05-16 21:59:53,875 INFO:root:Item F0180 processed.
+2023-05-16 21:59:53,885 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:54,408 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:54,409 INFO:root:Item F0181 image 1 has process ID 4996064.
+2023-05-16 21:59:54,410 INFO:root:Item F0181 processed.
+2023-05-16 21:59:54,420 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:54,940 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:54,940 INFO:root:Item F0182 image 1 has process ID 4996065.
+2023-05-16 21:59:54,942 INFO:root:Item F0182 processed.
+2023-05-16 21:59:54,953 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:55,467 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:55,467 INFO:root:Item F0183 image 1 has process ID 4996066.
+2023-05-16 21:59:55,469 INFO:root:Item F0183 processed.
+2023-05-16 21:59:55,475 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:55,974 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:55,974 INFO:root:Item F0184 image 1 has process ID 4996067.
+2023-05-16 21:59:55,976 INFO:root:Item F0184 processed.
+2023-05-16 21:59:55,984 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:56,480 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:56,480 INFO:root:Item F0185 image 1 has process ID 4996068.
+2023-05-16 21:59:56,481 INFO:root:Item F0185 processed.
+2023-05-16 21:59:56,488 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:56,956 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:56,956 INFO:root:Item F0186 image 1 has process ID 4996069.
+2023-05-16 21:59:56,958 INFO:root:Item F0186 processed.
+2023-05-16 21:59:56,961 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:57,421 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:57,421 INFO:root:Item F0187 image 1 has process ID 4996070.
+2023-05-16 21:59:57,422 INFO:root:Item F0187 processed.
+2023-05-16 21:59:57,429 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:57,844 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:57,844 INFO:root:Item F0188 image 1 has process ID 4996071.
+2023-05-16 21:59:57,846 INFO:root:Item F0188 processed.
+2023-05-16 21:59:57,853 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:58,310 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:58,310 INFO:root:Item F0189 image 1 has process ID 4996072.
+2023-05-16 21:59:58,311 INFO:root:Item F0189 processed.
+2023-05-16 21:59:58,317 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:58,724 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:58,724 INFO:root:Item F0190 image 1 has process ID 4996073.
+2023-05-16 21:59:58,726 INFO:root:Item F0190 processed.
+2023-05-16 21:59:58,731 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:59,143 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:59,143 INFO:root:Item F0191 image 1 has process ID 4996074.
+2023-05-16 21:59:59,145 INFO:root:Item F0191 processed.
+2023-05-16 21:59:59,151 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 21:59:59,557 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 21:59:59,558 INFO:root:Item F0192 image 1 has process ID 4996075.
+2023-05-16 21:59:59,559 INFO:root:Item F0192 processed.
+2023-05-16 21:59:59,565 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:00,107 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:00,107 INFO:root:Item F0193 image 1 has process ID 4996076.
+2023-05-16 22:00:00,109 INFO:root:Item F0193 processed.
+2023-05-16 22:00:00,116 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:00,567 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:00,567 INFO:root:Item F0194 image 1 has process ID 4996077.
+2023-05-16 22:00:00,568 INFO:root:Item F0194 processed.
+2023-05-16 22:00:00,578 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:01,066 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:01,066 INFO:root:Item F0195 image 1 has process ID 4996079.
+2023-05-16 22:00:01,068 INFO:root:Item F0195 processed.
+2023-05-16 22:00:01,074 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:01,445 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:01,445 INFO:root:Item F0196 image 1 has process ID 4996080.
+2023-05-16 22:00:01,447 INFO:root:Item F0196 processed.
+2023-05-16 22:00:01,454 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:01,847 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:01,847 INFO:root:Item F0197 image 1 has process ID 4996081.
+2023-05-16 22:00:01,848 INFO:root:Item F0197 processed.
+2023-05-16 22:00:01,855 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:02,289 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:02,290 INFO:root:Item F0198 image 1 has process ID 4996082.
+2023-05-16 22:00:02,291 INFO:root:Item F0198 processed.
+2023-05-16 22:00:02,294 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:02,717 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:02,718 INFO:root:Item F0199 image 1 has process ID 4996083.
+2023-05-16 22:00:02,719 INFO:root:Item F0199 processed.
+2023-05-16 22:00:02,725 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:03,156 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:03,157 INFO:root:Item F0200 image 1 has process ID 4996084.
+2023-05-16 22:00:03,158 INFO:root:Item F0200 processed.
+2023-05-16 22:00:03,166 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:03,627 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:03,627 INFO:root:Item F0201 image 1 has process ID 4996085.
+2023-05-16 22:00:03,629 INFO:root:Item F0201 processed.
+2023-05-16 22:00:03,633 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:04,094 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:04,094 INFO:root:Item F0202 image 1 has process ID 4996086.
+2023-05-16 22:00:04,095 INFO:root:Item F0202 processed.
+2023-05-16 22:00:04,099 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:04,532 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:04,533 INFO:root:Item F0203 image 1 has process ID 4996087.
+2023-05-16 22:00:04,534 INFO:root:Item F0203 processed.
+2023-05-16 22:00:04,540 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:04,960 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:04,960 INFO:root:Item F0204 image 1 has process ID 4996088.
+2023-05-16 22:00:04,961 INFO:root:Item F0204 processed.
+2023-05-16 22:00:04,965 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:05,406 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:05,406 INFO:root:Item F0205 image 1 has process ID 4996089.
+2023-05-16 22:00:05,408 INFO:root:Item F0205 processed.
+2023-05-16 22:00:05,411 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:05,908 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:05,909 INFO:root:Item F0206 image 1 has process ID 4996090.
+2023-05-16 22:00:05,910 INFO:root:Item F0206 processed.
+2023-05-16 22:00:05,914 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:06,369 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:06,369 INFO:root:Item F0207 image 1 has process ID 4996091.
+2023-05-16 22:00:06,370 INFO:root:Item F0207 processed.
+2023-05-16 22:00:06,373 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:06,774 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:06,774 INFO:root:Item F0208 image 1 has process ID 4996092.
+2023-05-16 22:00:06,776 INFO:root:Item F0208 processed.
+2023-05-16 22:00:06,784 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:07,284 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:07,285 INFO:root:Item F0209 image 1 has process ID 4996093.
+2023-05-16 22:00:07,286 INFO:root:Item F0209 processed.
+2023-05-16 22:00:07,292 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:07,706 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:07,706 INFO:root:Item F0210 image 1 has process ID 4996094.
+2023-05-16 22:00:07,708 INFO:root:Item F0210 processed.
+2023-05-16 22:00:07,711 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:08,149 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:08,150 INFO:root:Item F0211 image 1 has process ID 4996095.
+2023-05-16 22:00:08,152 INFO:root:Item F0211 processed.
+2023-05-16 22:00:08,158 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:08,585 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:08,586 INFO:root:Item F0212 image 1 has process ID 4996096.
+2023-05-16 22:00:08,587 INFO:root:Item F0212 processed.
+2023-05-16 22:00:08,593 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:09,019 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:09,020 INFO:root:Item F0213 image 1 has process ID 4996097.
+2023-05-16 22:00:09,021 INFO:root:Item F0213 processed.
+2023-05-16 22:00:09,024 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:09,469 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:09,469 INFO:root:Item F0214 image 1 has process ID 4996098.
+2023-05-16 22:00:09,471 INFO:root:Item F0214 processed.
+2023-05-16 22:00:09,477 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:09,907 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:09,907 INFO:root:Item F0215 image 1 has process ID 4996099.
+2023-05-16 22:00:09,908 INFO:root:Item F0215 processed.
+2023-05-16 22:00:09,915 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:10,400 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:10,401 INFO:root:Item F0216 image 1 has process ID 4996100.
+2023-05-16 22:00:10,402 INFO:root:Item F0216 processed.
+2023-05-16 22:00:10,406 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:10,836 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:10,836 INFO:root:Item F0217 image 1 has process ID 4996101.
+2023-05-16 22:00:10,837 INFO:root:Item F0217 processed.
+2023-05-16 22:00:10,846 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:11,309 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:11,309 INFO:root:Item F0218 image 1 has process ID 4996102.
+2023-05-16 22:00:11,311 INFO:root:Item F0218 processed.
+2023-05-16 22:00:11,318 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:11,810 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:11,810 INFO:root:Item F0219 image 1 has process ID 4996103.
+2023-05-16 22:00:11,811 INFO:root:Item F0219 processed.
+2023-05-16 22:00:11,815 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:12,278 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:12,278 INFO:root:Item F0220 image 1 has process ID 4996104.
+2023-05-16 22:00:12,280 INFO:root:Item F0220 processed.
+2023-05-16 22:00:12,288 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:12,752 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:12,752 INFO:root:Item F0221 image 1 has process ID 4996105.
+2023-05-16 22:00:12,754 INFO:root:Item F0221 processed.
+2023-05-16 22:00:12,762 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:13,215 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:13,215 INFO:root:Item F0222 image 1 has process ID 4996106.
+2023-05-16 22:00:13,216 INFO:root:Item F0222 processed.
+2023-05-16 22:00:13,222 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:13,748 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:13,748 INFO:root:Item F0223 image 1 has process ID 4996107.
+2023-05-16 22:00:13,750 INFO:root:Item F0223 processed.
+2023-05-16 22:00:13,753 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:14,167 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:14,168 INFO:root:Item F0224 image 1 has process ID 4996108.
+2023-05-16 22:00:14,169 INFO:root:Item F0224 processed.
+2023-05-16 22:00:14,175 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:14,588 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:14,588 INFO:root:Item F0225 image 1 has process ID 4996109.
+2023-05-16 22:00:14,589 INFO:root:Item F0225 processed.
+2023-05-16 22:00:14,592 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:15,002 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:15,003 INFO:root:Item F0226 image 1 has process ID 4996110.
+2023-05-16 22:00:15,004 INFO:root:Item F0226 processed.
+2023-05-16 22:00:15,008 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:15,434 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:15,434 INFO:root:Item F0227 image 1 has process ID 4996111.
+2023-05-16 22:00:15,435 INFO:root:Item F0227 processed.
+2023-05-16 22:00:15,443 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:15,881 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:15,881 INFO:root:Item F0228 image 1 has process ID 4996114.
+2023-05-16 22:00:15,882 INFO:root:Item F0228 processed.
+2023-05-16 22:00:15,890 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:16,345 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:16,345 INFO:root:Item F0229 image 1 has process ID 4996115.
+2023-05-16 22:00:16,347 INFO:root:Item F0229 processed.
+2023-05-16 22:00:16,350 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:16,763 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:16,763 INFO:root:Item F0230 image 1 has process ID 4996118.
+2023-05-16 22:00:16,764 INFO:root:Item F0230 processed.
+2023-05-16 22:00:16,771 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:17,209 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:17,209 INFO:root:Item F0231 image 1 has process ID 4996119.
+2023-05-16 22:00:17,211 INFO:root:Item F0231 processed.
+2023-05-16 22:00:17,215 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:17,691 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:17,691 INFO:root:Item F0232 image 1 has process ID 4996120.
+2023-05-16 22:00:17,692 INFO:root:Item F0232 processed.
+2023-05-16 22:00:17,703 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:18,276 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:18,276 INFO:root:Item F0233 image 1 has process ID 4996121.
+2023-05-16 22:00:18,278 INFO:root:Item F0233 processed.
+2023-05-16 22:00:18,290 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:18,877 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:18,878 INFO:root:Item F0234 image 1 has process ID 4996122.
+2023-05-16 22:00:18,879 INFO:root:Item F0234 processed.
+2023-05-16 22:00:18,890 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:19,473 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:19,473 INFO:root:Item F0235 image 1 has process ID 4996123.
+2023-05-16 22:00:19,474 INFO:root:Item F0235 processed.
+2023-05-16 22:00:19,486 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:20,057 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:20,058 INFO:root:Item F0236 image 1 has process ID 4996124.
+2023-05-16 22:00:20,059 INFO:root:Item F0236 processed.
+2023-05-16 22:00:20,068 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:20,661 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:20,661 INFO:root:Item F0237 image 1 has process ID 4996125.
+2023-05-16 22:00:20,663 INFO:root:Item F0237 processed.
+2023-05-16 22:00:20,673 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:21,258 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:21,259 INFO:root:Item F0238 image 1 has process ID 4996126.
+2023-05-16 22:00:21,261 INFO:root:Item F0238 processed.
+2023-05-16 22:00:21,270 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:21,832 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:21,832 INFO:root:Item F0239 image 1 has process ID 4996127.
+2023-05-16 22:00:21,833 INFO:root:Item F0239 processed.
+2023-05-16 22:00:21,843 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:22,396 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:22,396 INFO:root:Item F0240 image 1 has process ID 4996128.
+2023-05-16 22:00:22,398 INFO:root:Item F0240 processed.
+2023-05-16 22:00:22,409 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:22,969 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:22,969 INFO:root:Item F0241 image 1 has process ID 4996129.
+2023-05-16 22:00:22,970 INFO:root:Item F0241 processed.
+2023-05-16 22:00:22,978 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:23,479 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:23,479 INFO:root:Item F0242 image 1 has process ID 4996130.
+2023-05-16 22:00:23,481 INFO:root:Item F0242 processed.
+2023-05-16 22:00:23,490 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:23,978 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:23,979 INFO:root:Item F0243 image 1 has process ID 4996131.
+2023-05-16 22:00:23,980 INFO:root:Item F0243 processed.
+2023-05-16 22:00:23,984 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:24,462 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:24,462 INFO:root:Item F0244 image 1 has process ID 4996132.
+2023-05-16 22:00:24,463 INFO:root:Item F0244 processed.
+2023-05-16 22:00:24,471 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:24,956 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:24,956 INFO:root:Item F0245 image 1 has process ID 4996134.
+2023-05-16 22:00:24,958 INFO:root:Item F0245 processed.
+2023-05-16 22:00:24,966 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:25,625 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:25,625 INFO:root:Item F0246 image 1 has process ID 4996135.
+2023-05-16 22:00:25,627 INFO:root:Item F0246 processed.
+2023-05-16 22:00:25,631 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:26,080 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:26,080 INFO:root:Item F0247 image 1 has process ID 4996136.
+2023-05-16 22:00:26,082 INFO:root:Item F0247 processed.
+2023-05-16 22:00:26,086 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): transkribus.eu:443
+2023-05-16 22:00:26,525 DEBUG:urllib3.connectionpool:https://transkribus.eu:443 "POST /processing/v1/processes HTTP/1.1" 200 66
+2023-05-16 22:00:26,525 INFO:root:Item F0248 image 1 has process ID 4996137.
+2023-05-16 22:00:26,526 INFO:root:Item F0248 processed.
+2023-05-16 22:00:26,528 INFO:root:Map of map of item IDs to Transkribus metagrapho API processing IDs saved to processing_data_20230516-220026.csv.
+2023-05-16 22:00:26,651 INFO:root:Updated Tropy export JSON-LD file saved to C:\Users\Max\PycharmProjects\metagrapho-tropy/test/sample_input_updated_20230516-220026.json.
+2023-05-16 22:00:26,652 INFO:root:Finished
