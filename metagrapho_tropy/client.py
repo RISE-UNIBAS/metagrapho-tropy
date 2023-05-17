@@ -187,8 +187,8 @@ class Client:
 
         Sample Transkribus coordinates points: '192,458 192,514 332,514 332,458'. Read the tuple '192,
         458' as 'x, y' where '0, 0' is the top left corner of an image. Note that the y-axis is inverted (going down
-        is positive). The coordinates describe a rectangle where the first tuple is bottom left, the second tuple is
-        bottom right, the third tuple is top right and the fourth tuple is top left.
+        is positive). The coordinates describe a rectangle where the first tuple is top left, the second tuple is
+        top right, the third tuple is bottom right and the fourth tuple is bottom left.
 
         Sample output coordinates:
 
@@ -197,8 +197,8 @@ class Client:
 
         parsed_coordinates = coordinates.split(" ")
 
-        tropy_x =
-        tropy_y =
+        tropy_x = int(parsed_coordinates[0].split(",")[0])
+        tropy_y = int(parsed_coordinates[0].split(",")[0])
         tropy_width =
         tropy_height =
 
