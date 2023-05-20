@@ -32,7 +32,7 @@ class Utility:
         :param file_path: complete path to file including filename and extension
         """
 
-        with open(file_path, "w") as file:
+        with open(file_path, "w", encoding="utf-8") as file:
             dump(data, file, indent=4)
 
     @staticmethod

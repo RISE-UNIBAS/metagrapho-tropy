@@ -33,6 +33,14 @@ class Client:
     processing_data: list = None
 
     def __post_init__(self):
+        logging.basicConfig(level=logging.DEBUG,
+                            format="%(asctime)s %(levelname)s:%(name)s:%(message)s",
+                            handlers=[logging.FileHandler(f"main_{time.strftime('%Y%m%d-%H%M%S')}.log"),
+                                      logging.StreamHandler(),
+                                      ]
+                            )
+        logging.info(
+            f"Started Client.")
         if self.user is None or self.password is None:
             try:
                 from metagrapho_tropy.credentials import TRANSKRIBUS_USER, TRANSKRIBUS_PASSWORD
@@ -194,7 +202,6 @@ class Client:
         :param coordinates: value of Transkribus 'coords' key
         """
 
-        parsed_coordinates = [t.split(",") for t in coordinates.split(" ")]
         x_coordinates = [int(c.split(",")[0]) for c in coordinates.split(" ")]
         y_coordinates = [int(c.split(",")[1]) for c in coordinates.split(" ")]
 
@@ -207,7 +214,6 @@ class Client:
         print(tropy_y)
         print(tropy_width)
         print(tropy_height)
-
 
     def process_tropy(self,
                       tropy_file_path: str,
@@ -228,7 +234,8 @@ class Client:
         to an updated JSON-LD file; in addition, there is a CSV file mapping items to processing IDs. The Transkribus
         Processing API generates the transcription based on a layout detection model and an ATR model,
         both customizable via their IDs. If the Tropy image paths do not correspond to the image paths on the machine
-        running this module, provide the losest common directory shared by both paths.
+        running this module, provide the losest common directory shared by both paths. Use the Client.download method
+        to download the transcription from the Transkribus Processing API (do this within at most 24 hours).
 
         :param tropy_file_path: complete path to Tropy export file including file extension
         :param tropy_save_path: complete path to updated Tropy save file including file extension, defaults to None
@@ -238,8 +245,18 @@ class Client:
         :param item_image_index: the selected item's index, defaults to None
         :param line_model_id: the Transkribus line model ID, defaults to 49272 (= Mixed Text Line Orientation)
         :param atr_model_id: the Transkribus ATR model ID, defaults to 39995 (= Transkribus Print M1)
-        :param lowest_common_dir: lowest common directory, defaults to None
+        :param lowest_common_dir: the lowest common directory, defaults to None
         """
+
+        logging.info(
+            f"Started Client().process_tropy(tropy_file_path={tropy_file_path}, "
+            f"tropy_save_path={tropy_save_path}), "
+            f"mapping_save_path={mapping_save_path}), "
+            f"item_type={item_type}), "
+            f"item_tag={item_tag}), "
+            f"line_model_id={line_model_id}), "
+            f"atr_model_id={atr_model_id}), "
+            f"lowest_common_dir={lowest_common_dir}).")
 
         tropy = self._validate(tropy_file_path=tropy_file_path,
                                tropy_save_path=tropy_save_path,
@@ -308,6 +325,42 @@ class Client:
                           file_path=tropy_save_path)
         logging.info(f"Updated Tropy export JSON-LD file saved to {tropy_save_path}.")
 
+        logging.info(f"Finished Client.process_tropy.")
+
+    def download(self,
+                 mapping_file_path: str,
+                 download_save_path: str = None,
+                 ) -> None:
+
+        """ Download image to text transcriptions for Tropy items from the Transkribus Processing API.
+
+        :param mapping_file_path: complete path to CSV mapping file including file extension
+        :param download_save_path: complete path to download JSON save file including file extension, defaults to None
+        """
+
+        logging.info(
+            f"Started Client().download(mapping_file_path={mapping_file_path}, "
+            f"download_save_path={download_save_path}).")
+
+        mapping = self._load_mapping(mapping_file_path=mapping_file_path)
+
+        for key in mapping.keys():
+            try:
+                processing_id = mapping[key][1]
+                result = self.api.get_result(processing_id)
+                mapping[key].append(result.json())
+            except:
+                logging.exception(f"Unexpected exception in Client.download for {key}.")
+                raise
+
+        if download_save_path is None:
+            download_save_path = f"download_{time.strftime('%Y%m%d-%H%M%S')}.json"
+        Utility.save_json(data=mapping,
+                          file_path=download_save_path)
+        logging.info(f"Download JSON file saved to {download_save_path}.")
+
+        logging.info(f"Finished Client.download.")
+
     def enrich_tropy(self,
                      tropy_file_path: str,
                      mapping_file_path: str,
@@ -320,8 +373,12 @@ class Client:
         :param tropy_save_path: complete path to enriched Tropy save file including file extension, defaults to None
         """
 
-        print(self._transform_coordinates("192,458 192,514 332,514 332,458"))
+        logging.info(
+            f"Started Client().enrich_tropy(tropy_file_path={tropy_file_path}, "
+            f"mapping_file_path={mapping_file_path}).")
 
+        # debug work on transformation here
+        print(self._transform_coordinates("192,458 192,514 332,514 332,458"))
 
         tropy = self._validate(tropy_file_path=tropy_file_path,
                                mapping_file_path=mapping_file_path,
@@ -355,11 +412,7 @@ class Client:
             except KeyError:
                 pass
 
-
-
-
-
-
+        logging.info(f"Finished Client.enrich_tropy.")
 
     def get_response(self,
                      processing_id: int

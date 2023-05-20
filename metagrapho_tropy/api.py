@@ -33,9 +33,9 @@ class TranskribusProcessingAPI:
                 print(f"{response.json()}")
                 raise ConnectionError
             self.refresh_token = response.json()["access_token"]
-            print("Authorization successful.")
+            logging.info(f"{self.user} authorized successfully with {self.base_url}.")
         except ImportError:
-            logging.exception("Could not authenticate metagrapho API!")
+            logging.exception(f"Could not authorize {self.user} with {self.base_url}!")
             raise
 
     @staticmethod

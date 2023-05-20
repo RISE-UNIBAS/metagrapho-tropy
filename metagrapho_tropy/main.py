@@ -12,21 +12,24 @@ PARENT_DIR = os.path.dirname(os.path.dirname(__file__))
 TEST = f"{PARENT_DIR}/test"
 
 
-def main():
+def main_process():
+    Client().process_tropy(tropy_file_path=f"{TEST}/sample_input.json", item_type="Foto", item_image_index=1)
+
+
+def main_download():
+    mapping_file_path = f"{TEST}/mapping_input.csv"
+    Client().download(mapping_file_path=mapping_file_path)
+
+
+def main_enrich():
     tropy_file_path = f"{TEST}/sample_input_updated.json"
     mapping_file_path = f"{TEST}/mapping_input.csv"
-    logging.basicConfig(format="%(asctime)s %(levelname)s:%(name)s:%(message)s",
-                        filename="main.log",
-                        level=logging.DEBUG)
-    logging.info(f"Started Client().enrich_tropy(tropy_file_path={tropy_file_path}, mapping_file_path={mapping_file_path})")
     Client().enrich_tropy(tropy_file_path=tropy_file_path,
                           mapping_file_path=mapping_file_path
                           # lowest_common_dir="C:/Users/hinder0000/PycharmProjects",
                           )
-    logging.info("Finished")
+
 
 
 if __name__ == "__main__":
-    main()
-
-
+    main_download()
