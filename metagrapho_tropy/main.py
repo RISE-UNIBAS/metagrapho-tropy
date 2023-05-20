@@ -23,13 +23,13 @@ def main_download():
 
 def main_enrich():
     tropy_file_path = f"{TEST}/sample_input_updated.json"
-    mapping_file_path = f"{TEST}/mapping_input.csv"
+    download_file_path = f"{TEST}/download_input.json"
     Client().enrich_tropy(tropy_file_path=tropy_file_path,
-                          mapping_file_path=mapping_file_path
+                          download_file_path=download_file_path
                           # lowest_common_dir="C:/Users/hinder0000/PycharmProjects",
                           )
 
 
 
 if __name__ == "__main__":
-    main_download()
+    main_enrich()

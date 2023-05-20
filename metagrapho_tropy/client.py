@@ -110,7 +110,7 @@ class Client:
             # TODO: add validation for tropy_save_path
         if mapping_file_path is not None:
             pass
-            # TODO: add validation for mapping_file_path
+            # TODO: add validation for download_file_path
         if mapping_save_path is not None:
             pass
             # TODO: add validation for mapping_save_path
@@ -190,14 +190,12 @@ class Client:
         return dict_map
 
     @staticmethod
-    def _transform_coordinates(coordinates: str) -> None:
+    def _transform_coordinates(coordinates: str) -> list[int]:
         """ Transform Transkribus coordinates points to Tropy coordinates.
 
         Sample Transkribus coordinates points: '192,458 192,514 332,514 332,458'. Read the tuple '192,
         458' as 'x, y' where '0, 0' is the top left corner of an image. Note that the y-axis is inverted (going down
         is positive).
-
-        Sample output coordinates:
 
         :param coordinates: value of Transkribus 'coords' key
         """
@@ -210,10 +208,7 @@ class Client:
         tropy_width = max(x_coordinates) - tropy_x
         tropy_height = max(y_coordinates) - tropy_y
 
-        print(tropy_x)
-        print(tropy_y)
-        print(tropy_width)
-        print(tropy_height)
+        return [tropy_x, tropy_y, tropy_width, tropy_height]
 
     def process_tropy(self,
                       tropy_file_path: str,
@@ -332,14 +327,15 @@ class Client:
                  download_save_path: str = None,
                  ) -> None:
 
-        """ Download image to text transcriptions for Tropy items from the Transkribus Processing API.
+        """ Download image to text transcriptions for Tropy items from the Transkribus Processing API initialized with
+        the Client.process_tropy method.
 
         :param mapping_file_path: complete path to CSV mapping file including file extension
         :param download_save_path: complete path to download JSON save file including file extension, defaults to None
         """
 
         logging.info(
-            f"Started Client().download(mapping_file_path={mapping_file_path}, "
+            f"Started Client().download(download_file_path={mapping_file_path}, "
             f"download_save_path={download_save_path}).")
 
         mapping = self._load_mapping(mapping_file_path=mapping_file_path)
@@ -363,64 +359,94 @@ class Client:
 
     def enrich_tropy(self,
                      tropy_file_path: str,
-                     mapping_file_path: str,
+                     download_file_path: str,
                      tropy_save_path: str = None,
                      ) -> None:
         """ Enrich
 
         :param tropy_file_path: complete path to Tropy export file including file extension
-        :param mapping_file_path: complete path to CSV mapping file including file extension
+        :param download_file_path: complete path to JSON download file including file extension
         :param tropy_save_path: complete path to enriched Tropy save file including file extension, defaults to None
         """
 
         logging.info(
             f"Started Client().enrich_tropy(tropy_file_path={tropy_file_path}, "
-            f"mapping_file_path={mapping_file_path}).")
-
-        # debug work on transformation here
-        print(self._transform_coordinates("192,458 192,514 332,514 332,458"))
+            f"download_file_path={download_file_path}).")
 
         tropy = self._validate(tropy_file_path=tropy_file_path,
-                               mapping_file_path=mapping_file_path,
+                               mapping_file_path=download_file_path,
                                tropy_save_path=tropy_save_path)
 
-        mapping = self._load_mapping(mapping_file_path=mapping_file_path)
-
-        c = 0
+        download = Utility.load_json(file_path=download_file_path)
 
         for item in tropy.graph:
-
-            if DEBUG is True:
-                if c > 3:
-                    continue
-
             parsed_item = Item()
             parsed_item.copy_metadata_from_dict(item)
 
+            # dev:
+            if parsed_item.identifier != "F0234":
+                continue
+
             try:
-                processing_id = mapping[parsed_item.identifier][1]
-                result = self.api.get_result(processing_id)
-                logging.info(f"Item {parsed_item.identifier} with {result}.")
-                print(parsed_item.identifier)
-                print(result.json())
-                # print(result.json()["content"]["text"])
-                print(result.json()["text"]["regions"])
-
-                # for each text region in
-
-                c += 1
+                image_index = int(download[parsed_item.identifier][0])
+                result = download[parsed_item.identifier][2]
+                text = download[parsed_item.identifier][2]["content"]["text"]
+                regions = download[parsed_item.identifier][2]["content"]["regions"]
+                print(f"{parsed_item.identifier}, {len(regions)}")
             except KeyError:
-                pass
+                raise
+
+            # TODO: add text as note to item
+            note_element = {
+                "@type": "Note",
+                "text": {
+                    "@value": text,
+                    "@language": "de"
+                },
+                "html": {
+                    "@value": f"<p>{text}</p>",
+                    "@language": "de"
+                }
+            }
+            try:
+                item["photo"][image_index]["note"].append(note_element)
+            except KeyError:
+                item["photo"][image_index]["note"] = [note_element]
+
+            # TODO: for each region in regions, add selection to image with image_index
+            # first case for 1 region
+            for region in regions:
+                try:
+                    coordinates = self._transform_coordinates(region["coords"]["points"])
+                except:
+                    raise
+                seletion_element = {
+                  "@type": "Selection",
+                  "template": "https://tropy.org/v1/templates/selection",
+                  "x": coordinates[0],
+                  "y": coordinates[1],
+                  "angle": 0,
+                  "brightness": 0,
+                  "contrast": 0,
+                  "height": coordinates[3],
+                  "hue": 0,
+                  "mirror": False,
+                  "negative": False,
+                  "saturation": 0,
+                  "sharpen": 0,
+                  "width": coordinates[2],
+                  "note": [note_element]
+                }
+                try:
+                    item["photo"][image_index]["selection"].append(seletion_element)
+                except KeyError:
+                    item["photo"][image_index]["selection"] = [seletion_element]
+
+        if tropy_save_path is None:
+            tropy_save_path = "".join(
+                tropy_file_path.split(".")[:-1] + [f"_enriched_{time.strftime('%Y%m%d-%H%M%S')}.json"])
+        Utility.save_json(data=tropy.json_export,
+                          file_path=tropy_save_path)
+        logging.info(f"Enriched Tropy export JSON-LD file saved to {tropy_save_path}.")
 
         logging.info(f"Finished Client.enrich_tropy.")
-
-    def get_response(self,
-                     processing_id: int
-                     ) -> None:
-        """ bla
-
-        :param processing_id:
-
-        """
-        get_response = self.api.get_result(processing_id)
-        print(get_response.json())
