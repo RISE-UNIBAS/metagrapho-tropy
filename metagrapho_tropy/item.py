@@ -181,7 +181,7 @@ class Item:
                               coords: str,
                               language: str = "de",
                               ):
-        """ Add a selection element to a photo.
+        """ Add a selection element with a line transcription to a photo.
 
         :param text: the note element's text
         :param photo_index: the photo to which the note will attach
@@ -201,7 +201,7 @@ class Item:
             }
         }
         line_coordinates = self.transform_coordinates(coords)
-        seletion_element = {
+        selection_element = {
             "@type": "Selection",
             "template": "https://tropy.org/v1/templates/selection",
             "x": line_coordinates[0],
@@ -216,9 +216,12 @@ class Item:
             "saturation": 0,
             "sharpen": 0,
             "width": line_coordinates[2],
+            "title": {
+                "@type": "text",
+                "@value": text},
             "note": [note_element]
         }
         try:
-            self.photo[photo_index]["selection"].append(seletion_element)
+            self.photo[photo_index]["selection"].append(selection_element)
         except KeyError:
-            self.photo[photo_index]["selection"] = [seletion_element]
+            self.photo[photo_index]["selection"] = [selection_element]

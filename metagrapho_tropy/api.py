@@ -2,8 +2,8 @@
 =============
 TranskribusProcessingAPI class.
 """
-import logging
 
+import logging
 import requests
 
 
