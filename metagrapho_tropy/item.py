@@ -110,7 +110,7 @@ class Item:
 
     def copy_metadata_from_item(self,
                                 item: Item,
-                                *args):
+                                *args) -> None:
         """ Copy metadata from item.
 
         :param item: the item from which metadata is copied
@@ -125,3 +125,100 @@ class Item:
                     self.__setattr__(key, item.serialize()[key])
             except Exception:
                 raise
+
+    @staticmethod
+    def transform_coordinates(coordinates: str) -> list[int]:
+        """ Transform Transkribus coordinates points to Tropy coordinates.
+
+        Sample Transkribus coordinates points: '192,458 192,514 332,514 332,458'. Read the tuple '192,
+        458' as 'x, y' where '0, 0' is the top left corner of an image. Note that the y-axis is inverted (going down
+        is positive).
+
+        :param coordinates: value of Transkribus 'coords' key
+        """
+
+        x_coordinates = [int(c.split(",")[0]) for c in coordinates.split(" ")]
+        y_coordinates = [int(c.split(",")[1]) for c in coordinates.split(" ")]
+
+        tropy_x = min(x_coordinates)
+        tropy_y = min(y_coordinates)
+        tropy_width = max(x_coordinates) - tropy_x
+        tropy_height = max(y_coordinates) - tropy_y
+
+        return [tropy_x, tropy_y, tropy_width, tropy_height]
+
+    def add_note_element(self,
+                         text: str,
+                         photo_index: int,
+                         language: str = "de"
+                         ) -> None:
+        """ Add a note element to a photo.
+
+        :param text: the note element's text
+        :param photo_index: the photo to which the note will attach
+        :param language: the note's language, defaults to 'de'
+        """
+
+        note_element = {
+            "@type": "Note",
+            "text": {
+                "@value": text,
+                "@language": language
+            },
+            "html": {
+                "@value": f"<p>{text}</p>",
+                "@language": language
+            }
+        }
+        try:
+            self.photo[photo_index]["note"].append(note_element)
+        except KeyError:
+            self.photo[photo_index]["note"] = [note_element]
+
+    def add_selection_element(self,
+                              text: str,
+                              photo_index: int,
+                              coords: str,
+                              language: str = "de",
+                              ):
+        """ Add a selection element to a photo.
+
+        :param text: the note element's text
+        :param photo_index: the photo to which the note will attach
+        :param coords: Transkribus coordinates
+        :param language: the note's language, defaults to 'de'
+        """
+
+        note_element = {
+            "@type": "Note",
+            "text": {
+                "@value": text,
+                "@language": language
+            },
+            "html": {
+                "@value": f"<p>{text}</p>",
+                "@language": language
+            }
+        }
+        line_coordinates = self.transform_coordinates(coords)
+        seletion_element = {
+            "@type": "Selection",
+            "template": "https://tropy.org/v1/templates/selection",
+            "x": line_coordinates[0],
+            "y": line_coordinates[1],
+            "angle": 0,
+            "brightness": 0,
+            "contrast": 0,
+            "height": line_coordinates[3],
+            "hue": 0,
+            "mirror": False,
+            "negative": False,
+            "saturation": 0,
+            "sharpen": 0,
+            "width": line_coordinates[2],
+            "note": [note_element]
+        }
+        try:
+            self.photo[photo_index]["selection"].append(seletion_element)
+        except KeyError:
+            self.photo[photo_index]["selection"] = [seletion_element]

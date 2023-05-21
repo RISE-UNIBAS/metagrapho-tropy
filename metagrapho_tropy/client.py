@@ -189,27 +189,6 @@ class Client:
 
         return dict_map
 
-    @staticmethod
-    def _transform_coordinates(coordinates: str) -> list[int]:
-        """ Transform Transkribus coordinates points to Tropy coordinates.
-
-        Sample Transkribus coordinates points: '192,458 192,514 332,514 332,458'. Read the tuple '192,
-        458' as 'x, y' where '0, 0' is the top left corner of an image. Note that the y-axis is inverted (going down
-        is positive).
-
-        :param coordinates: value of Transkribus 'coords' key
-        """
-
-        x_coordinates = [int(c.split(",")[0]) for c in coordinates.split(" ")]
-        y_coordinates = [int(c.split(",")[1]) for c in coordinates.split(" ")]
-
-        tropy_x = min(x_coordinates)
-        tropy_y = min(y_coordinates)
-        tropy_width = max(x_coordinates) - tropy_x
-        tropy_height = max(y_coordinates) - tropy_y
-
-        return [tropy_x, tropy_y, tropy_width, tropy_height]
-
     def process_tropy(self,
                       tropy_file_path: str,
                       tropy_save_path: str = None,
@@ -307,7 +286,7 @@ class Client:
 
         if mapping_save_path is None:
             mapping_save_path = f"mapping_{time.strftime('%Y%m%d-%H%M%S')}.csv"
-        Utility.save_csv(header=["item_id", "image_index", "process_id"],
+        Utility.save_csv(header=["item_id", "photo_index", "process_id"],
                          data=self.processing_data,
                          file_path=mapping_save_path)
         logging.info(
@@ -361,17 +340,21 @@ class Client:
                      tropy_file_path: str,
                      download_file_path: str,
                      tropy_save_path: str = None,
+                     lines: bool = False,
                      ) -> None:
         """ Enrich
 
         :param tropy_file_path: complete path to Tropy export file including file extension
         :param download_file_path: complete path to JSON download file including file extension
         :param tropy_save_path: complete path to enriched Tropy save file including file extension, defaults to None
+        :param lines:
         """
 
         logging.info(
             f"Started Client().enrich_tropy(tropy_file_path={tropy_file_path}, "
-            f"download_file_path={download_file_path}).")
+            f"download_file_path={download_file_path}),"
+            f"tropy_save_path={tropy_save_path},"
+            f"lines={lines}.")
 
         tropy = self._validate(tropy_file_path=tropy_file_path,
                                mapping_file_path=download_file_path,
@@ -383,64 +366,31 @@ class Client:
             parsed_item = Item()
             parsed_item.copy_metadata_from_dict(item)
 
-            # dev:
-            if parsed_item.identifier != "F0234":
+            try:
+                if "atr_processed" not in parsed_item.tag:
+                    continue
+            except TypeError:
                 continue
 
             try:
                 image_index = int(download[parsed_item.identifier][0])
-                result = download[parsed_item.identifier][2]
-                text = download[parsed_item.identifier][2]["content"]["text"]
+                text = download[parsed_item.identifier][2]["content"]["text"]  # TODO: add metadata for transcription
                 regions = download[parsed_item.identifier][2]["content"]["regions"]
-                print(f"{parsed_item.identifier}, {len(regions)}")
+                parsed_item.add_note_element(text=text,
+                                             photo_index=image_index)
+                if lines is True:
+                    for region in regions:
+                        for line in region["lines"]:
+                            parsed_item.add_selection_element(text=line["text"],
+                                                              photo_index=image_index,
+                                                              coords=line["coords"]["points"])
+                item = parsed_item.serialize()
             except KeyError:
+                logging.exception(f"Item {parsed_item.identifier} has no result, previous processing or download failed.")
+                pass
+            except:
+                logging.exception(f"Unexpected exception in Client.enrich_tropy for {parsed_item.identifier}.")
                 raise
-
-            # TODO: add text as note to item
-            note_element = {
-                "@type": "Note",
-                "text": {
-                    "@value": text,
-                    "@language": "de"
-                },
-                "html": {
-                    "@value": f"<p>{text}</p>",
-                    "@language": "de"
-                }
-            }
-            try:
-                item["photo"][image_index]["note"].append(note_element)
-            except KeyError:
-                item["photo"][image_index]["note"] = [note_element]
-
-            # TODO: for each region in regions, add selection to image with image_index
-            # first case for 1 region
-            for region in regions:
-                try:
-                    coordinates = self._transform_coordinates(region["coords"]["points"])
-                except:
-                    raise
-                seletion_element = {
-                  "@type": "Selection",
-                  "template": "https://tropy.org/v1/templates/selection",
-                  "x": coordinates[0],
-                  "y": coordinates[1],
-                  "angle": 0,
-                  "brightness": 0,
-                  "contrast": 0,
-                  "height": coordinates[3],
-                  "hue": 0,
-                  "mirror": False,
-                  "negative": False,
-                  "saturation": 0,
-                  "sharpen": 0,
-                  "width": coordinates[2],
-                  "note": [note_element]
-                }
-                try:
-                    item["photo"][image_index]["selection"].append(seletion_element)
-                except KeyError:
-                    item["photo"][image_index]["selection"] = [seletion_element]
 
         if tropy_save_path is None:
             tropy_save_path = "".join(

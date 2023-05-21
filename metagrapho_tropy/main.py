@@ -25,7 +25,8 @@ def main_enrich():
     tropy_file_path = f"{TEST}/sample_input_updated.json"
     download_file_path = f"{TEST}/download_input.json"
     Client().enrich_tropy(tropy_file_path=tropy_file_path,
-                          download_file_path=download_file_path
+                          download_file_path=download_file_path,
+                          lines=True
                           # lowest_common_dir="C:/Users/hinder0000/PycharmProjects",
                           )
 
