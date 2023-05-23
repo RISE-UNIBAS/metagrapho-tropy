@@ -49,7 +49,7 @@ lorem ipsum
 - [x] add CITATION.cff
 - [ ] add metadata on transcription provenance
 - [ ] add unittests based on sample data
-- [ ] add documentation via Sphinx and pages
+- [x] add documentation via Sphinx and pages
 - [ ] release with Zenodo DOI
 - [ ] release package on PyPi
 
