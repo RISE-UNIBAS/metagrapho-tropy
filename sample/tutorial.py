@@ -17,7 +17,7 @@ def process():
 
 
 def download():
-    mapping_file_path = f"{SAMPLE}/download_input.csv"
+    mapping_file_path = f"{SAMPLE}/mapping_input.csv"
     Client().download(mapping_file_path=mapping_file_path)
 
 

@@ -32,7 +32,7 @@ from metagrapho_tropy.client import Client
 Client().process_tropy(tropy_file_path="sample_input.json",
                        item_type="Foto",
                        item_image_index=1)
-Client().download(mapping_file_path="download_input.csv")
+Client().download(mapping_file_path="mapping_input.csv")
 Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
                       download_file_path="download_input.json",
                       lines=True)
