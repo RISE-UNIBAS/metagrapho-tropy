@@ -10,9 +10,9 @@ This dataset was created by the University of Basel's Research and Infrastructur
 
 Note that there are [different versions of this software](https://github.com/RISE-UNIBAS/metagrapho-tropy/releases).
 
-- Python package in [/metagrapho_tropy](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/metagrapho_tropy)
-- documentation [here](https://rise-unibas.github.io/metagrapho-tropy/) and in [/docs](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/docs)
-- sample data in [/sample](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/sample)
+- Python package in [`/metagrapho_tropy`](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/metagrapho_tropy)
+- documentation [here](https://rise-unibas.github.io/metagrapho-tropy/) and in [`/docs`](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/docs)
+- sample data in [`/sample`](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/sample)
 
 ## Quickstart
 
@@ -38,19 +38,15 @@ Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
                       lines=True)
 ```
 
-## Tutorial
-
-lorem ipsum
-
 ## To dos
 
 
-- [ ] flesh out tutorial
 - [x] add CITATION.cff
-- [ ] add metadata on transcription provenance
-- [ ] add unittests based on sample data
 - [x] add documentation via Sphinx and pages
 - [ ] release with Zenodo DOI
+- [ ] add tutorial
+- [ ] add metadata on transcription provenance
+- [ ] add unittests based on sample data
 - [ ] release package on PyPi
 
 ## License
