@@ -11,7 +11,7 @@ This dataset was created by the University of Basel's Research and Infrastructur
 Note that there are [different versions of this software](https://github.com/RISE-UNIBAS/metagrapho-tropy/releases).
 
 - Python package in [/metagrapho_tropy](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/metagrapho_tropy)
-- documentation here and in [/docs](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/docs)
+- documentation [here](https://rise-unibas.github.io/metagrapho-tropy/) and in [/docs](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/docs)
 - sample data in [/sample](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/sample)
 
 ## Quickstart
