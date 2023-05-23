@@ -394,8 +394,7 @@ class Client:
                 raise
 
         if tropy_save_path is None:
-            tropy_save_path = "".join(
-                tropy_file_path.split(".")[:-1] + [f"_enriched_{time.strftime('%Y%m%d-%H%M%S')}.json"])
+            tropy_save_path = "".join(tropy_file_path.split(".")[:-1] + [f"_enriched_{time.strftime('%Y%m%d-%H%M%S')}.json"])
         Utility.save_json(data=tropy.json_export,
                           file_path=tropy_save_path)
         logging.info(f"Enriched Tropy export JSON-LD file saved to {tropy_save_path}.")

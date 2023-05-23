@@ -11,6 +11,9 @@ from typing import List, Dict
 class Item:
     """ A representation of a Tropy item.
 
+    The schema used (https://github.com/RISE-UNIBAS/bildersammlung-buddhismus-public/blob/main/indexing/AneignungBuddhismus.ttp)
+    is an extension of the generic Tropy item.
+
     Parameter naming prioritizes Tropy naming conventions for fields over PEP.
 
     :param template: http://purl.org/dc/elements/1.1/type

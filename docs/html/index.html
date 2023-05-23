@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation of metagrapho-tropy &mdash; metagrapho-tropy  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            metagrapho-tropy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Documentation of metagrapho-tropy</a><ul>
+<li><a class="reference internal" href="#client-py">client.py</a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client"><code class="docutils literal notranslate"><span class="pre">Client</span></code></a><ul>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client._load_mapping"><code class="docutils literal notranslate"><span class="pre">Client._load_mapping()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client._process_image"><code class="docutils literal notranslate"><span class="pre">Client._process_image()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client._repath"><code class="docutils literal notranslate"><span class="pre">Client._repath()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client._validate"><code class="docutils literal notranslate"><span class="pre">Client._validate()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client.download"><code class="docutils literal notranslate"><span class="pre">Client.download()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client.enrich_tropy"><code class="docutils literal notranslate"><span class="pre">Client.enrich_tropy()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.client.Client.process_tropy"><code class="docutils literal notranslate"><span class="pre">Client.process_tropy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processing-api-py">processing_api.py</a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.api.TranskribusProcessingAPI"><code class="docutils literal notranslate"><span class="pre">TranskribusProcessingAPI</span></code></a><ul>
+<li><a class="reference internal" href="#metagrapho_tropy.api.TranskribusProcessingAPI.authenticate"><code class="docutils literal notranslate"><span class="pre">TranskribusProcessingAPI.authenticate()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.api.TranskribusProcessingAPI.get_result"><code class="docutils literal notranslate"><span class="pre">TranskribusProcessingAPI.get_result()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.api.TranskribusProcessingAPI.get_user"><code class="docutils literal notranslate"><span class="pre">TranskribusProcessingAPI.get_user()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.api.TranskribusProcessingAPI.post_processes"><code class="docutils literal notranslate"><span class="pre">TranskribusProcessingAPI.post_processes()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#items-py">items.py</a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item"><code class="docutils literal notranslate"><span class="pre">Item</span></code></a><ul>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.add_note_element"><code class="docutils literal notranslate"><span class="pre">Item.add_note_element()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.add_selection_element"><code class="docutils literal notranslate"><span class="pre">Item.add_selection_element()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.copy_metadata_from_dict"><code class="docutils literal notranslate"><span class="pre">Item.copy_metadata_from_dict()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.copy_metadata_from_item"><code class="docutils literal notranslate"><span class="pre">Item.copy_metadata_from_item()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.get_inscribed_map"><code class="docutils literal notranslate"><span class="pre">Item.get_inscribed_map()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.get_normalized_tropy_field_names"><code class="docutils literal notranslate"><span class="pre">Item.get_normalized_tropy_field_names()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.serialize"><code class="docutils literal notranslate"><span class="pre">Item.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.item.Item.transform_coordinates"><code class="docutils literal notranslate"><span class="pre">Item.transform_coordinates()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tropy-py">tropy.py</a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.tropy.Tropy"><code class="docutils literal notranslate"><span class="pre">Tropy</span></code></a><ul>
+<li><a class="reference internal" href="#metagrapho_tropy.tropy.Tropy.get_types"><code class="docutils literal notranslate"><span class="pre">Tropy.get_types()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.tropy.Tropy.save"><code class="docutils literal notranslate"><span class="pre">Tropy.save()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utility-py">utility.py</a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.utility.Utility"><code class="docutils literal notranslate"><span class="pre">Utility</span></code></a><ul>
+<li><a class="reference internal" href="#metagrapho_tropy.utility.Utility.load_csv"><code class="docutils literal notranslate"><span class="pre">Utility.load_csv()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.utility.Utility.load_json"><code class="docutils literal notranslate"><span class="pre">Utility.load_json()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.utility.Utility.save_csv"><code class="docutils literal notranslate"><span class="pre">Utility.save_csv()</span></code></a></li>
+<li><a class="reference internal" href="#metagrapho_tropy.utility.Utility.save_json"><code class="docutils literal notranslate"><span class="pre">Utility.save_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">metagrapho-tropy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentation of metagrapho-tropy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation-of-metagrapho-tropy">
+<h1>Documentation of metagrapho-tropy<a class="headerlink" href="#documentation-of-metagrapho-tropy" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-metagrapho_tropy.client"></span><section id="client-py">
+<h2>client.py<a class="headerlink" href="#client-py" title="Permalink to this heading"></a></h2>
+<p>Client class.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metagrapho_tropy.client.</span></span><span class="sig-name descname"><span class="pre">Client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processing_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client" title="Permalink to this definition"></a></dt>
+<dd><p>Standalone client.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – User’s Transkribus email, defaults to None</p></li>
+<li><p><strong>password</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – User’s Transkribus password, defaults to None</p></li>
+<li><p><strong>api</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="#metagrapho_tropy.api.TranskribusProcessingAPI" title="metagrapho_tropy.api.TranskribusProcessingAPI"><code class="xref py py-class docutils literal notranslate"><span class="pre">TranskribusProcessingAPI</span></code></a>]) – Transkribus metagrapho API wrapper instance, defaults to None</p></li>
+<li><p><strong>processing_data</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – map of item IDs to Transkribus metagrapho API processing IDs, defaults to None</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client._load_mapping">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_load_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client._load_mapping" title="Permalink to this definition"></a></dt>
+<dd><p>Load mapping as dictionary with Tropy item ID as key and list of image index, processing ID as value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client._process_image">
+<span class="sig-name descname"><span class="pre">_process_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_image_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_model_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atr_model_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lowest_common_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client._process_image" title="Permalink to this definition"></a></dt>
+<dd><p>Process a single image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<a class="reference internal" href="#metagrapho_tropy.item.Item" title="metagrapho_tropy.item.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a>) – a Tropy item</p></li>
+<li><p><strong>item_image_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the selected item’s index</p></li>
+<li><p><strong>line_model_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the Transkribus line model ID, defaults to None</p></li>
+<li><p><strong>atr_model_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the Transkribus ATR model ID, defaults to None</p></li>
+<li><p><strong>lowest_common_dir</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – lowest common directory, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client._repath">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_repath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lowest_common_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client._repath" title="Permalink to this definition"></a></dt>
+<dd><p>Refactor a Tropy image path from machine X to be used on machine Y given the lowest common directory of X
+and Y.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the Tropy image path</p></li>
+<li><p><strong>lowest_common_dir</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the lowest common directory</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client._validate">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tropy_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tropy_save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping_file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping_save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_image_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_model_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atr_model_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lowest_common_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client._validate" title="Permalink to this definition"></a></dt>
+<dd><p>Validate user input and initialize Tropy instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tropy_file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to Tropy export file including file extension</p></li>
+<li><p><strong>tropy_save_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – complete path to updated Tropy save file including file extension, defaults to None</p></li>
+<li><p><strong>mapping_save_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – complete path to CSV mapping save file including file extension, defaults to None</p></li>
+<li><p><strong>item_type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – the item type, defaults to None</p></li>
+<li><p><strong>item_tag</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – the item tag, defaults to None</p></li>
+<li><p><strong>item_image_index</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the selected item’s index, defaults to None</p></li>
+<li><p><strong>line_model_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the Transkribus line model ID, defaults to None</p></li>
+<li><p><strong>atr_model_id</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the Transkribus ATR model ID, defaults to None</p></li>
+<li><p><strong>lowest_common_dir</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – lowest common directory, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#metagrapho_tropy.tropy.Tropy" title="metagrapho_tropy.tropy.Tropy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tropy</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download_save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client.download" title="Permalink to this definition"></a></dt>
+<dd><p>Download image to text transcriptions for Tropy items from the Transkribus Processing API initialized with
+the Client.process_tropy method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mapping_file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to CSV mapping file including file extension</p></li>
+<li><p><strong>download_save_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – complete path to download JSON save file including file extension, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client.enrich_tropy">
+<span class="sig-name descname"><span class="pre">enrich_tropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tropy_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tropy_save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client.enrich_tropy" title="Permalink to this definition"></a></dt>
+<dd><p>Enrich items in a Tropy export JSON-LD with transcriptions.</p>
+<p>The transcriptions must be provided in a separate file generated by running Client.process_tropy and
+Client.download first.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tropy_file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to Tropy export file including file extension</p></li>
+<li><p><strong>download_file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to JSON download file including file extension</p></li>
+<li><p><strong>tropy_save_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – complete path to enriched Tropy save file including file extension, defaults to None</p></li>
+<li><p><strong>lines</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – toggle line by line transcription as selection elements, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.client.Client.process_tropy">
+<span class="sig-name descname"><span class="pre">process_tropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tropy_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tropy_save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping_save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_image_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_model_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">49272</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atr_model_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">39995</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lowest_common_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.client.Client.process_tropy" title="Permalink to this definition"></a></dt>
+<dd><p>Process selected Tropy items to yield image to text transcriptions.</p>
+<p>Provide a Tropy export JSON-LD file. Items are selected via type and tag (optional and conjunctive). If no
+selection is made, all items are enriched. Images are selected via their index. If no specific image is
+selected, image to text is applied to all images. Processed items get the tag “atr_processed” and are saved
+to an updated JSON-LD file; in addition, there is a CSV file mapping items to processing IDs. The Transkribus
+Processing API generates the transcription based on a layout detection model and an ATR model,
+both customizable via their IDs. If the Tropy image paths do not correspond to the image paths on the machine
+running this module, provide the losest common directory shared by both paths. Use the Client.download method
+to download the transcription from the Transkribus Processing API (do this within at most 24 hours).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tropy_file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to Tropy export file including file extension</p></li>
+<li><p><strong>tropy_save_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – complete path to updated Tropy save file including file extension, defaults to None</p></li>
+<li><p><strong>mapping_save_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – complete path to CSV mapping save file including file extension, defaults to None</p></li>
+<li><p><strong>item_type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – the item type, defaults to None</p></li>
+<li><p><strong>item_tag</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – the item tag, defaults to None</p></li>
+<li><p><strong>item_image_index</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the selected item’s index, defaults to None</p></li>
+<li><p><strong>line_model_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the Transkribus line model ID, defaults to 49272 (= Mixed Text Line Orientation)</p></li>
+<li><p><strong>atr_model_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the Transkribus ATR model ID, defaults to 39995 (= Transkribus Print M1)</p></li>
+<li><p><strong>lowest_common_dir</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – the lowest common directory, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-metagrapho_tropy.api"></span><section id="processing-api-py">
+<h2>processing_api.py<a class="headerlink" href="#processing-api-py" title="Permalink to this heading"></a></h2>
+<p>TranskribusProcessingAPI class.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="metagrapho_tropy.api.TranskribusProcessingAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metagrapho_tropy.api.</span></span><span class="sig-name descname"><span class="pre">TranskribusProcessingAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.api.TranskribusProcessingAPI" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper class of the Transkribus Processing API (Transkribus metagrapho API).</p>
+<p>Swagger documentation of the API at <a class="reference external" href="https://transkribus.eu/processing/swagger/">https://transkribus.eu/processing/swagger/</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Transkribus username</p></li>
+<li><p><strong>password</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Transkribus password</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.api.TranskribusProcessingAPI.authenticate">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.api.TranskribusProcessingAPI.authenticate" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper of oAuth2AuthCode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the username</p></li>
+<li><p><strong>password</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the password</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.api.TranskribusProcessingAPI.get_result">
+<span class="sig-name descname"><span class="pre">get_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.api.TranskribusProcessingAPI.get_result" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper of <a class="reference external" href="https://transkribus.eu/processing/swagger/#/Retrieve%20processing%20status%20and%20result">https://transkribus.eu/processing/swagger/#/Retrieve%20processing%20status%20and%20result</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>process_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the Transkribus Processing API “processId” parameter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.api.TranskribusProcessingAPI.get_user">
+<span class="sig-name descname"><span class="pre">get_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.api.TranskribusProcessingAPI.get_user" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper of <a class="reference external" href="https://transkribus.eu/processing/swagger/#/User%20Account/getUserInfo">https://transkribus.eu/processing/swagger/#/User%20Account/getUserInfo</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.api.TranskribusProcessingAPI.post_processes">
+<span class="sig-name descname"><span class="pre">post_processes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_model_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atr_model_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.api.TranskribusProcessingAPI.post_processes" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper of <a class="reference external" href="https://transkribus.eu/processing/swagger/#/Submit%20data%20for%20processing">https://transkribus.eu/processing/swagger/#/Submit%20data%20for%20processing</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line_model_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the Transkribus layout detection model ID</p></li>
+<li><p><strong>atr_model_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the Transkribus ATR model ID</p></li>
+<li><p><strong>image</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – an image encoded to Base64</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-metagrapho_tropy.item"></span><section id="items-py">
+<h2>items.py<a class="headerlink" href="#items-py" title="Permalink to this heading"></a></h2>
+<p>Item classes.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metagrapho_tropy.item.</span></span><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://tropy.org/v1/templates/id#iTbU0YBP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LocationShown</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LocationCreated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PersonInImage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PersonInImageWDetails</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">creator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcterms_creator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcterms_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hasPart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isPartOf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isRelatedTo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">photo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">note</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item" title="Permalink to this definition"></a></dt>
+<dd><p>A representation of a Tropy item.</p>
+<p>The schema used (<a class="reference external" href="https://github.com/RISE-UNIBAS/bildersammlung-buddhismus-public/blob/main/indexing/AneignungBuddhismus.ttp">https://github.com/RISE-UNIBAS/bildersammlung-buddhismus-public/blob/main/indexing/AneignungBuddhismus.ttp</a>)
+is an extension of the generic Tropy item.</p>
+<p>Parameter naming prioritizes Tropy naming conventions for fields over PEP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – <a class="reference external" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a></p></li>
+<li><p><strong>title</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/elements/1.1/title">http://purl.org/dc/elements/1.1/title</a></p></li>
+<li><p><strong>LocationShown</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://iptc.org/std/Iptc4xmpExt/2008-02-29/LocationShown">http://iptc.org/std/Iptc4xmpExt/2008-02-29/LocationShown</a></p></li>
+<li><p><strong>LocationCreated</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://iptc.org/std/Iptc4xmpExt/2008-02-29/LocationCreated">http://iptc.org/std/Iptc4xmpExt/2008-02-29/LocationCreated</a></p></li>
+<li><p><strong>PersonInImage</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://iptc.org/std/Iptc4xmpExt/2008-02-29/PersonInImage">http://iptc.org/std/Iptc4xmpExt/2008-02-29/PersonInImage</a></p></li>
+<li><p><strong>PersonInImageWDetails</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://iptc.org/std/Iptc4xmpExt/2008-02-29/PersonInImageWDetails">http://iptc.org/std/Iptc4xmpExt/2008-02-29/PersonInImageWDetails</a></p></li>
+<li><p><strong>creator</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/elements/1.1/creator">http://purl.org/dc/elements/1.1/creator</a></p></li>
+<li><p><strong>dcterms_creator</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/terms/creator">http://purl.org/dc/terms/creator</a></p></li>
+<li><p><strong>date</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a></p></li>
+<li><p><strong>dcterms_date</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/terms/date">http://purl.org/dc/terms/date</a></p></li>
+<li><p><strong>type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a></p></li>
+<li><p><strong>source</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/elements/1.1/source">http://purl.org/dc/elements/1.1/source</a></p></li>
+<li><p><strong>collection</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="https://tropy.org/v1/tropy#collection">https://tropy.org/v1/tropy#collection</a></p></li>
+<li><p><strong>box</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="https://tropy.org/v1/tropy#box">https://tropy.org/v1/tropy#box</a></p></li>
+<li><p><strong>folder</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="https://tropy.org/v1/tropy#folder">https://tropy.org/v1/tropy#folder</a></p></li>
+<li><p><strong>object</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://www.europeana.eu/schemas/edm/object">http://www.europeana.eu/schemas/edm/object</a></p></li>
+<li><p><strong>identifier</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a></p></li>
+<li><p><strong>rights</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a></p></li>
+<li><p><strong>hasPart</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a></p></li>
+<li><p><strong>isPartOf</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a></p></li>
+<li><p><strong>isRelatedTo</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <a class="reference external" href="http://www.europeana.eu/schemas/edm/isRelatedTo">http://www.europeana.eu/schemas/edm/isRelatedTo</a></p></li>
+<li><p><strong>photo</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]]) – <a class="reference external" href="https://tropy.org/v1/tropy#photo">https://tropy.org/v1/tropy#photo</a></p></li>
+<li><p><strong>list</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – Tropy list</p></li>
+<li><p><strong>tag</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – Tropy tag</p></li>
+<li><p><strong>note</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – Tropy note</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.add_note_element">
+<span class="sig-name descname"><span class="pre">add_note_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">photo_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'de'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.add_note_element" title="Permalink to this definition"></a></dt>
+<dd><p>Add a note element to a photo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the note element’s text</p></li>
+<li><p><strong>photo_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the photo to which the note will attach</p></li>
+<li><p><strong>language</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the note’s language, defaults to ‘de’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.add_selection_element">
+<span class="sig-name descname"><span class="pre">add_selection_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">photo_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'de'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.add_selection_element" title="Permalink to this definition"></a></dt>
+<dd><p>Add a selection element with a line transcription to a photo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the note element’s text</p></li>
+<li><p><strong>photo_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the photo to which the note will attach</p></li>
+<li><p><strong>coords</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Transkribus coordinates</p></li>
+<li><p><strong>language</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the note’s language, defaults to ‘de’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.copy_metadata_from_dict">
+<span class="sig-name descname"><span class="pre">copy_metadata_from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.copy_metadata_from_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Copy metadata from dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.copy_metadata_from_item">
+<span class="sig-name descname"><span class="pre">copy_metadata_from_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.copy_metadata_from_item" title="Permalink to this definition"></a></dt>
+<dd><p>Copy metadata from item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<a class="reference internal" href="#metagrapho_tropy.item.Item" title="metagrapho_tropy.item.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a>) – the item from which metadata is copied</p></li>
+<li><p><strong>args</strong> – deselected attributes (values not copied)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.get_inscribed_map">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_inscribed_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.get_inscribed_map" title="Permalink to this definition"></a></dt>
+<dd><p>Get mapping of field to inscribed field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.get_normalized_tropy_field_names">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_normalized_tropy_field_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.get_normalized_tropy_field_names" title="Permalink to this definition"></a></dt>
+<dd><p>Get normalized keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.serialize" title="Permalink to this definition"></a></dt>
+<dd><p>Serialize item as dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.item.Item.transform_coordinates">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transform_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.item.Item.transform_coordinates" title="Permalink to this definition"></a></dt>
+<dd><p>Transform Transkribus coordinates points to Tropy coordinates.</p>
+<p>Sample Transkribus coordinates points: ‘192,458 192,514 332,514 332,458’. Read the tuple ‘192,
+458’ as ‘x, y’ where ‘0, 0’ is the top left corner of an image. Note that the y-axis is inverted (going down
+is positive).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coordinates</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – value of Transkribus ‘coords’ key</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-metagrapho_tropy.tropy"></span><section id="tropy-py">
+<h2>tropy.py<a class="headerlink" href="#tropy-py" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Tropy class.</p>
+</div></blockquote>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="metagrapho_tropy.tropy.Tropy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metagrapho_tropy.tropy.</span></span><span class="sig-name descname"><span class="pre">Tropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_export</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.tropy.Tropy" title="Permalink to this definition"></a></dt>
+<dd><p>A representation of a Tropy export.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_export</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – loaded Tropy JSON export file</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.tropy.Tropy.get_types">
+<span class="sig-name descname"><span class="pre">get_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.tropy.Tropy.get_types" title="Permalink to this definition"></a></dt>
+<dd><p>Get deduplicated values of the items’ type fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.tropy.Tropy.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.tropy.Tropy.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save Tropy export to file path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> – complete path to file including filename and extension</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-metagrapho_tropy.utility"></span><section id="utility-py">
+<h2>utility.py<a class="headerlink" href="#utility-py" title="Permalink to this heading"></a></h2>
+<p>Utility class.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="metagrapho_tropy.utility.Utility">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metagrapho_tropy.utility.</span></span><span class="sig-name descname"><span class="pre">Utility</span></span><a class="headerlink" href="#metagrapho_tropy.utility.Utility" title="Permalink to this definition"></a></dt>
+<dd><p>A collection of utility functions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.utility.Utility.load_csv">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.utility.Utility.load_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Load CSV from file as list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to file including filename and extension</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.utility.Utility.load_json">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.utility.Utility.load_json" title="Permalink to this definition"></a></dt>
+<dd><p>Load a JSON object from file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to file including filename and extension</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.utility.Utility.save_csv">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.utility.Utility.save_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Save data as CSV file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>header</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – the header</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – the data to be saved</p></li>
+<li><p><strong>file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to file including filename and extension</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metagrapho_tropy.utility.Utility.save_json">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metagrapho_tropy.utility.Utility.save_json" title="Permalink to this definition"></a></dt>
+<dd><p>Save data as JSON file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – the data to be saved</p></li>
+<li><p><strong>file_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – complete path to file including filename and extension</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Maximilian Hindermann (rise@unibas.ch).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

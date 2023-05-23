@@ -1,5 +1,5 @@
 """ processing_api.py
-=============
+=====================
 TranskribusProcessingAPI class.
 """
 
