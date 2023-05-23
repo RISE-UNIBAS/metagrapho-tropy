@@ -16,7 +16,15 @@ Note that there are [different versions of this software](https://github.com/RIS
 
 ## Quickstart
 
+To go from this
 
+![](https://github.com/RISE-UNIBAS/metagrapho-tropy/blob/main/docs/images/input.png?raw=true)
+
+To this
+
+![](https://github.com/RISE-UNIBAS/metagrapho-tropy/blob/main/docs/images/output_2.png?raw=true)
+
+Use this
 
 ```
 from metagrapho_tropy.client import Client
