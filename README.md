@@ -2,6 +2,8 @@
 
 Add transcriptions to items in [Tropy](https://tropy.org/) using the [Transkribus metagrapho API](https://readcoop.eu/api/).
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7962603.svg)](https://doi.org/10.5281/zenodo.7962603)
+
 ## Creator
 
 This dataset was created by the University of Basel's Research and Infrastructure Support RISE (rise@unibas.ch) in 2023.
@@ -43,7 +45,7 @@ Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
 
 - [x] add CITATION.cff
 - [x] add documentation via Sphinx and pages
-- [ ] release with Zenodo DOI
+- [x] release with Zenodo DOI
 - [ ] add tutorial
 - [ ] add metadata on transcription provenance
 - [ ] add unittests based on sample data
