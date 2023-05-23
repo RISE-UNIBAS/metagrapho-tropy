@@ -32,7 +32,7 @@ Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
 - [ ] add unittests based on sample data
 - [ ] add documentation via Sphinx and pages
 - [ ] flesh out tutorial
-- [ ] add CITATION.cff
+- [x] add CITATION.cff
 - [ ] release with Zenodo DOI
 - [ ] add metadata on transcription provenance
 
