@@ -1,6 +1,6 @@
 # metagrapho-tropy
 
-Add transcriptions to items in Tropy using the Transkribus metagrapho API.
+Add transcriptions to items in [Tropy](https://tropy.org/) using the [Transkribus metagrapho API](https://readcoop.eu/api/).
 
 ## Creator
 
@@ -8,12 +8,15 @@ This dataset was created by the University of Basel's Research and Infrastructur
 
 ## File structure and data overview
 
-Note that there are [different versions of this dataset](https://github.com/RISE-UNIBAS/metagrapho-tropy/releases).
+Note that there are [different versions of this software](https://github.com/RISE-UNIBAS/metagrapho-tropy/releases).
 
 - Python package in [/metagrapho_tropy](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/metagrapho_tropy)
+- documentation here and in [/docs](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/docs)
 - sample data in [/sample](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/sample)
 
-## Tutorial
+## Quickstart
+
+
 
 ```
 from metagrapho_tropy.client import Client
@@ -27,14 +30,20 @@ Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
                       lines=True)
 ```
 
+## Tutorial
+
+lorem ipsum
+
 ## To dos
 
-- [ ] add unittests based on sample data
-- [ ] add documentation via Sphinx and pages
+
 - [ ] flesh out tutorial
 - [x] add CITATION.cff
-- [ ] release with Zenodo DOI
 - [ ] add metadata on transcription provenance
+- [ ] add unittests based on sample data
+- [ ] add documentation via Sphinx and pages
+- [ ] release with Zenodo DOI
+- [ ] release package on PyPi
 
 ## License
 

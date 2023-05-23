@@ -1,6 +1,6 @@
-""" main.py
-=============
-Main. """
+""" tutorial.py
+===============
+Script supporting the tutorial at https://github.com/RISE-UNIBAS/metagrapho-tropy#tutorial. """
 
 from metagrapho_tropy.client import Client
 import os.path
@@ -10,18 +10,18 @@ PARENT_DIR = os.path.dirname(os.path.dirname(__file__))
 SAMPLE = f"{PARENT_DIR}/sample"
 
 
-def main_process():
+def process():
     Client().process_tropy(tropy_file_path=f"{SAMPLE}/sample_input.json",
                            item_type="Foto",
                            item_image_index=1)
 
 
-def main_download():
+def download():
     mapping_file_path = f"{SAMPLE}/mapping_input.csv"
     Client().download(mapping_file_path=mapping_file_path)
 
 
-def main_enrich():
+def enrich():
     tropy_file_path = f"{SAMPLE}/sample_input_updated.json"
     download_file_path = f"{SAMPLE}/download_input.json"
     Client().enrich_tropy(tropy_file_path=tropy_file_path,

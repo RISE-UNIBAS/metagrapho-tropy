@@ -33,7 +33,7 @@ class Client:
     def __post_init__(self):
         logging.basicConfig(level=logging.DEBUG,
                             format="%(asctime)s %(levelname)s:%(name)s:%(message)s",
-                            handlers=[logging.FileHandler(f"main_{time.strftime('%Y%m%d-%H%M%S')}.log"),
+                            handlers=[logging.FileHandler(f"metagrapho_tropy_{time.strftime('%Y%m%d-%H%M%S')}.log"),
                                       logging.StreamHandler(),
                                       ]
                             )
