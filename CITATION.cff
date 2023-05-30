@@ -13,6 +13,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.7962603
     description: Version 0.1.0
+  - type: doi
+    value: 10.5281/zenodo.7985112
+    description: Version 0.1.1
 url: 'https://github.com/RISE-UNIBAS/metagrapho-tropy'
 abstract: >-
   Add transcriptions to items in Tropy using the Transkribus
