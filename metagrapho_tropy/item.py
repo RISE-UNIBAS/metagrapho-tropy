@@ -183,7 +183,7 @@ class Item:
                               photo_index: int,
                               coords: str,
                               language: str = "de",
-                              ):
+                              ) -> None:
         """ Add a selection element with a line transcription to a photo.
 
         :param text: the note element's text
@@ -191,6 +191,9 @@ class Item:
         :param coords: Transkribus coordinates
         :param language: the note's language, defaults to 'de'
         """
+
+        if text == "":
+            return
 
         note_element = {
             "@type": "Note",
