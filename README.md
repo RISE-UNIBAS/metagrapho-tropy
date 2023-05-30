@@ -6,7 +6,7 @@ Add transcriptions to items in [Tropy](https://tropy.org/) using the [Transkribu
 
 ## Creator
 
-This dataset was created by the University of Basel's Research and Infrastructure Support RISE (rise@unibas.ch) in 2023.
+This software was created by the University of Basel's Research and Infrastructure Support RISE (rise@unibas.ch) in 2023.
 
 ## File structure and data overview
 
