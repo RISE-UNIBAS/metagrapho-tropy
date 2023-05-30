@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Unittest for `Client.enrich_tropy`.
+- Unittest for `Client.enrich_tropy` ([#1](https://github.com/RISE-UNIBAS/metagrapho-tropy/pull/1)).
 - Changelog.
 - Docs for Zenodo.
 
