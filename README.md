@@ -10,11 +10,12 @@ This software was created by the University of Basel's Research and Infrastructu
 
 ## File structure and data overview
 
-Note that there are [different versions of this software](https://github.com/RISE-UNIBAS/metagrapho-tropy/releases).
+Note that there are [different versions of this software](https://github.com/RISE-UNIBAS/metagrapho-tropy/releases), see the [changelog](https://github.com/RISE-UNIBAS/metagrapho-tropy/blob/main/CHANGELOG.md) for details.
 
 - Python package in [`/metagrapho_tropy`](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/metagrapho_tropy)
 - documentation [here](https://rise-unibas.github.io/metagrapho-tropy/) and in [`/docs`](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/docs)
 - sample data in [`/sample`](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/sample)
+- tests in [`/tests`](https://github.com/RISE-UNIBAS/metagrapho-tropy/tree/main/tests)
 
 ## Quickstart
 
@@ -44,7 +45,7 @@ Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
 
 - [ ] add tutorial
 - [ ] add metadata on transcription provenance
-- [ ] add unittests based on sample data
+- [ ] add unittests for `Client.process_tropy` and `Client.download`.
 - [ ] release package on PyPi
 
 ## License
