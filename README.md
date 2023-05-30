@@ -44,7 +44,7 @@ Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
 
 - [ ] add tutorial
 - [ ] add metadata on transcription provenance
-- [ ] add unittests based on sample data
+- [ ] add unittests for `Client.process_tropy` and `Client.download`.
 - [ ] release package on PyPi
 
 ## License

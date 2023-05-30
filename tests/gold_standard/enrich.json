@@ -1,0 +1,673 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@vocab": "https://tropy.org/v1/tropy#",
+        "template": {
+            "@type": "@id"
+        },
+        "photo": {
+            "@id": "https://tropy.org/v1/tropy#photo",
+            "@container": "@list"
+        },
+        "note": {
+            "@id": "https://tropy.org/v1/tropy#note",
+            "@container": "@list"
+        },
+        "selection": {
+            "@id": "https://tropy.org/v1/tropy#selection",
+            "@container": "@list"
+        },
+        "object": "http://www.europeana.eu/schemas/edm/object",
+        "type": "http://purl.org/dc/elements/1.1/type",
+        "PersonInImageWDetails": "http://iptc.org/std/Iptc4xmpExt/2008-02-29/PersonInImageWDetails",
+        "creator": "http://purl.org/dc/terms/creator",
+        "date": {
+            "@id": "http://purl.org/dc/terms/date",
+            "@type": "https://tropy.org/v1/tropy#date"
+        },
+        "identifier": "http://purl.org/dc/elements/1.1/identifier",
+        "isPartOf": "http://purl.org/dc/terms/isPartOf",
+        "source": "http://purl.org/dc/elements/1.1/source",
+        "title": "http://purl.org/dc/elements/1.1/title",
+        "format": "http://purl.org/dc/elements/1.1/format",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "LocationCreated": "http://iptc.org/std/Iptc4xmpExt/2008-02-29/LocationCreated"
+    },
+    "@graph": [
+        {
+            "@type": "Item",
+            "template": "https://tropy.org/v1/templates/id#iTbU0YBP",
+            "folder": "JM001",
+            "box": "F01",
+            "object": "AM002",
+            "type": "Foto",
+            "PersonInImageWDetails": "Arthur Schopenhauer",
+            "creator": "Johannes Sch\u00e4fer",
+            "date": "1859",
+            "identifier": "F0001",
+            "isPartOf": "FB0001",
+            "source": "F01-JM001-AM002-F0001",
+            "title": "Moderner Buddhismus Europa Asien 1 - F0001",
+            "tag": [
+                "done_round_1",
+                "atr_processed",
+                "marc_round_1"
+            ],
+            "photo": [
+                {
+                    "@type": "Photo",
+                    "checksum": "c68c789242b3ccf9942f9b4b76a784d2",
+                    "color": "rgb(216,216,216,1)",
+                    "density": null,
+                    "filename": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0001.jpg",
+                    "mimetype": "image/jpeg",
+                    "orientation": 1,
+                    "page": 0,
+                    "path": "C:\\Users\\hinder0000\\PycharmProjects\\bildersammlung-buddhismus-public\\digitized\\WE 1 Moderner Buddhismus Europa und Asien Teil 1\\Images\\Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0001.jpg",
+                    "protocol": "file",
+                    "size": 614346,
+                    "template": "https://tropy.org/v1/templates/id#Oi0DBbM4",
+                    "angle": 0,
+                    "brightness": 0,
+                    "contrast": 0,
+                    "height": 1419,
+                    "hue": 0,
+                    "mirror": false,
+                    "negative": false,
+                    "saturation": 0,
+                    "sharpen": 0,
+                    "width": 1119,
+                    "format": "A6",
+                    "dc:date": {
+                        "@type": "https://tropy.org/v1/tropy#date",
+                        "@value": 1669635137000
+                    },
+                    "title": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0001"
+                },
+                {
+                    "@type": "Photo",
+                    "checksum": "870f9af2f19730d1f36ed4b884d543ae",
+                    "color": "rgb(216,216,232,1)",
+                    "density": null,
+                    "filename": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0002.jpg",
+                    "mimetype": "image/jpeg",
+                    "orientation": 1,
+                    "page": 0,
+                    "path": "C:\\Users\\hinder0000\\PycharmProjects\\bildersammlung-buddhismus-public\\digitized\\WE 1 Moderner Buddhismus Europa und Asien Teil 1\\Images\\Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0002.jpg",
+                    "protocol": "file",
+                    "size": 273214,
+                    "template": "https://tropy.org/v1/templates/photo",
+                    "angle": 0,
+                    "brightness": 0,
+                    "contrast": 0,
+                    "height": 1403,
+                    "hue": 0,
+                    "mirror": false,
+                    "negative": false,
+                    "saturation": 0,
+                    "sharpen": 0,
+                    "width": 1119,
+                    "dc:date": {
+                        "@type": "https://tropy.org/v1/tropy#date",
+                        "@value": 1669635148000
+                    },
+                    "title": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0002"
+                }
+            ]
+        },
+        {
+            "@type": "Item",
+            "template": "https://tropy.org/v1/templates/id#iTbU0YBP",
+            "folder": "JM002",
+            "box": "F01",
+            "object": "AM001",
+            "type": "Foto",
+            "LocationCreated": "Hondo ; Berlin-Frohnau",
+            "PersonInImageWDetails": "Bronze Buddha",
+            "date": "1252 ; 1972",
+            "identifier": "F0002",
+            "isPartOf": "FB0002",
+            "source": "F01-JM002-AM001-F0002",
+            "title": "Moderner Buddhismus Europa Asien 1 - F0002",
+            "tag": [
+                "done_round_1",
+                "atr_processed",
+                "marc_round_1"
+            ],
+            "photo": [
+                {
+                    "@type": "Photo",
+                    "checksum": "d28099c081b2b09803e42a052aa2e9d2",
+                    "color": "rgb(104,104,120,1)",
+                    "density": null,
+                    "filename": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0003.jpg",
+                    "mimetype": "image/jpeg",
+                    "orientation": 1,
+                    "page": 0,
+                    "path": "C:\\Users\\hinder0000\\PycharmProjects\\bildersammlung-buddhismus-public\\digitized\\WE 1 Moderner Buddhismus Europa und Asien Teil 1\\Images\\Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0003.jpg",
+                    "protocol": "file",
+                    "size": 1172531,
+                    "template": "https://tropy.org/v1/templates/id#Oi0DBbM4",
+                    "angle": 0,
+                    "brightness": 0,
+                    "contrast": 0,
+                    "height": 1974,
+                    "hue": 0,
+                    "mirror": false,
+                    "negative": false,
+                    "saturation": 0,
+                    "sharpen": 0,
+                    "width": 1437,
+                    "format": "A6",
+                    "dc:date": {
+                        "@type": "https://tropy.org/v1/tropy#date",
+                        "@value": 1669631591000
+                    },
+                    "title": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0003"
+                },
+                {
+                    "@type": "Photo",
+                    "checksum": "e138c52e647a23c679e353047a429e1a",
+                    "color": "rgb(200,200,200,1)",
+                    "density": null,
+                    "filename": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0004.jpg",
+                    "mimetype": "image/jpeg",
+                    "orientation": 6,
+                    "page": 0,
+                    "path": "C:\\Users\\hinder0000\\PycharmProjects\\bildersammlung-buddhismus-public\\digitized\\WE 1 Moderner Buddhismus Europa und Asien Teil 1\\Images\\Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0004.jpg",
+                    "protocol": "file",
+                    "size": 594147,
+                    "template": "https://tropy.org/v1/templates/photo",
+                    "angle": 0,
+                    "brightness": 0,
+                    "contrast": 0,
+                    "height": 1960,
+                    "hue": 0,
+                    "mirror": false,
+                    "negative": false,
+                    "saturation": 0,
+                    "sharpen": 0,
+                    "width": 1413,
+                    "dc:date": {
+                        "@type": "https://tropy.org/v1/tropy#date",
+                        "@value": 1669631597000
+                    },
+                    "title": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0004",
+                    "note": [
+                        {
+                            "@type": "Note",
+                            "text": {
+                                "@value": "Bronze-Buddha\nauf der jap. Hauptinsel Hondo\nin Kamakura, 15 m hoch. erbaut 1252\n(kleine Nachbildung aus dem buddhistischen\nTempel in Berlin-Frohnau im M\u00e4rz 1972 entwendet)\n\n\n\nECHTFOTO",
+                                "@language": "de"
+                            },
+                            "html": {
+                                "@value": "<p>Bronze-Buddha\nauf der jap. Hauptinsel Hondo\nin Kamakura, 15 m hoch. erbaut 1252\n(kleine Nachbildung aus dem buddhistischen\nTempel in Berlin-Frohnau im M\u00e4rz 1972 entwendet)\n\n\n\nECHTFOTO</p>",
+                                "@language": "de"
+                            }
+                        }
+                    ],
+                    "selection": [
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 131,
+                            "y": 108,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 53,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 259,
+                            "title": {
+                                "@type": "text",
+                                "@value": "Bronze-Buddha"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "Bronze-Buddha",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>Bronze-Buddha</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 137,
+                            "y": 152,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 43,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 471,
+                            "title": {
+                                "@type": "text",
+                                "@value": "auf der jap. Hauptinsel Hondo"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "auf der jap. Hauptinsel Hondo",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>auf der jap. Hauptinsel Hondo</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 135,
+                            "y": 187,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 52,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 591,
+                            "title": {
+                                "@type": "text",
+                                "@value": "in Kamakura, 15 m hoch. erbaut 1252"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "in Kamakura, 15 m hoch. erbaut 1252",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>in Kamakura, 15 m hoch. erbaut 1252</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 143,
+                            "y": 238,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 45,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 609,
+                            "title": {
+                                "@type": "text",
+                                "@value": "(kleine Nachbildung aus dem buddhistischen"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "(kleine Nachbildung aus dem buddhistischen",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>(kleine Nachbildung aus dem buddhistischen</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 141,
+                            "y": 273,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 77,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 691,
+                            "title": {
+                                "@type": "text",
+                                "@value": "Tempel in Berlin-Frohnau im M\u00e4rz 1972 entwendet)"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "Tempel in Berlin-Frohnau im M\u00e4rz 1972 entwendet)",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>Tempel in Berlin-Frohnau im M\u00e4rz 1972 entwendet)</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 1564,
+                            "y": 151,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 74,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 177,
+                            "title": {
+                                "@type": "text",
+                                "@value": "ECHTFOTO"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "ECHTFOTO",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>ECHTFOTO</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Item",
+            "template": "https://tropy.org/v1/templates/id#iTbU0YBP",
+            "folder": "JM002",
+            "box": "F01",
+            "object": "AM001",
+            "type": "Foto",
+            "isPartOf": "FB0002",
+            "PersonInImageWDetails": "Ven. Udogampola Wijayasoma (Maha Thero)",
+            "identifier": "F0003",
+            "source": "F01-JM002-AM001-F0003",
+            "title": "Moderner Buddhismus Europa Asien 1 - F0003",
+            "tag": [
+                "done_round_1",
+                "atr_processed",
+                "marc_round_1"
+            ],
+            "photo": [
+                {
+                    "@type": "Photo",
+                    "checksum": "84fbd224c48dee498e772abb980e6938",
+                    "color": "rgb(40,40,56,1)",
+                    "density": null,
+                    "filename": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0005.jpg",
+                    "mimetype": "image/jpeg",
+                    "orientation": 1,
+                    "page": 0,
+                    "path": "C:\\Users\\hinder0000\\PycharmProjects\\bildersammlung-buddhismus-public\\digitized\\WE 1 Moderner Buddhismus Europa und Asien Teil 1\\Images\\Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0005.jpg",
+                    "protocol": "file",
+                    "size": 1678966,
+                    "template": "https://tropy.org/v1/templates/id#Oi0DBbM4",
+                    "angle": 0,
+                    "brightness": 0,
+                    "contrast": 0,
+                    "height": 1380,
+                    "hue": 0,
+                    "mirror": false,
+                    "negative": false,
+                    "saturation": 0,
+                    "sharpen": 0,
+                    "width": 2014,
+                    "format": "A6",
+                    "dc:date": {
+                        "@type": "https://tropy.org/v1/tropy#date",
+                        "@value": 1669631654000
+                    },
+                    "title": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0005"
+                },
+                {
+                    "@type": "Photo",
+                    "checksum": "66ab3039b5a83e26b837a6376fcea27e",
+                    "color": "rgb(184,200,200,1)",
+                    "density": null,
+                    "filename": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0006.jpg",
+                    "mimetype": "image/jpeg",
+                    "orientation": 1,
+                    "page": 0,
+                    "path": "C:\\Users\\hinder0000\\PycharmProjects\\bildersammlung-buddhismus-public\\digitized\\WE 1 Moderner Buddhismus Europa und Asien Teil 1\\Images\\Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0006.jpg",
+                    "protocol": "file",
+                    "size": 582613,
+                    "template": "https://tropy.org/v1/templates/photo",
+                    "angle": 0,
+                    "brightness": 0,
+                    "contrast": 0,
+                    "height": 1381,
+                    "hue": 0,
+                    "mirror": false,
+                    "negative": false,
+                    "saturation": 0,
+                    "sharpen": 0,
+                    "width": 2030,
+                    "dc:date": {
+                        "@type": "https://tropy.org/v1/tropy#date",
+                        "@value": 1669631661000
+                    },
+                    "title": "Images_WE_1_Moderner_Buddhismus_Europa_und_Asien_Teil_1_1249039_0006",
+                    "note": [
+                        {
+                            "@type": "Note",
+                            "text": {
+                                "@value": "Buddhistisches Haus mit Tempel\nin Berlin-Frohnau\nVen. Udogampola Wijegasoma Naha Thero\nBudhista domo e templo\nNBI",
+                                "@language": "de"
+                            },
+                            "html": {
+                                "@value": "<p>Buddhistisches Haus mit Tempel\nin Berlin-Frohnau\nVen. Udogampola Wijegasoma Naha Thero\nBudhista domo e templo\nNBI</p>",
+                                "@language": "de"
+                            }
+                        }
+                    ],
+                    "selection": [
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 123,
+                            "y": 122,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 80,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 543,
+                            "title": {
+                                "@type": "text",
+                                "@value": "Buddhistisches Haus mit Tempel"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "Buddhistisches Haus mit Tempel",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>Buddhistisches Haus mit Tempel</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 126,
+                            "y": 175,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 49,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 288,
+                            "title": {
+                                "@type": "text",
+                                "@value": "in Berlin-Frohnau"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "in Berlin-Frohnau",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>in Berlin-Frohnau</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 61,
+                            "y": 224,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 87,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 1066,
+                            "title": {
+                                "@type": "text",
+                                "@value": "Ven. Udogampola Wijegasoma Naha Thero"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "Ven. Udogampola Wijegasoma Naha Thero",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>Ven. Udogampola Wijegasoma Naha Thero</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 114,
+                            "y": 1228,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 77,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 418,
+                            "title": {
+                                "@type": "text",
+                                "@value": "Budhista domo e templo"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "Budhista domo e templo",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>Budhista domo e templo</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "Selection",
+                            "template": "https://tropy.org/v1/templates/selection",
+                            "x": 1824,
+                            "y": 126,
+                            "angle": 0,
+                            "brightness": 0,
+                            "contrast": 0,
+                            "height": 61,
+                            "hue": 0,
+                            "mirror": false,
+                            "negative": false,
+                            "saturation": 0,
+                            "sharpen": 0,
+                            "width": 82,
+                            "title": {
+                                "@type": "text",
+                                "@value": "NBI"
+                            },
+                            "note": [
+                                {
+                                    "@type": "Note",
+                                    "text": {
+                                        "@value": "NBI",
+                                        "@language": "de"
+                                    },
+                                    "html": {
+                                        "@value": "<p>NBI</p>",
+                                        "@language": "de"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "version": "1.13.1"
+}
