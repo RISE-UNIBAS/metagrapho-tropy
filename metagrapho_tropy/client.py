@@ -376,6 +376,9 @@ class Client:
             try:
                 image_index = int(download[parsed_item.identifier][0])
                 text = download[parsed_item.identifier][2]["content"]["text"]  # TODO: add metadata for transcription
+                if text == "":
+                    logging.info(f"Item {parsed_item.identifier} not enriched, empty transcription.")
+                    continue
                 regions = download[parsed_item.identifier][2]["content"]["regions"]
                 parsed_item.add_note_element(text=text,
                                              photo_index=image_index)
@@ -386,6 +389,7 @@ class Client:
                                                               photo_index=image_index,
                                                               coords=line["coords"]["points"])
                 item = parsed_item.serialize()
+                logging.info(f"Successfully enriched item {parsed_item.identifier}.")
             except KeyError:
                 logging.exception(f"Item {parsed_item.identifier} has no result, previous processing or download failed.")
                 pass

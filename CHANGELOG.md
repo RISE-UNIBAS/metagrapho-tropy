@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changelog.
 - Docs for Zenodo.
 
+### Fixed
+
+- Skip empty transcription (items with empty notes are invalid in Tropy).
+
 ## [0.1.0] - 2023-05-23
 
 ### Added

@@ -42,7 +42,8 @@ Client().enrich_tropy(tropy_file_path="sample_input_updated.json",
 
 ## To dos
 
-
+- [x] fix bug where empty text do not get imported 
+- [ ] fix bug where items w/ >1 text regions do not get imported
 - [x] add CITATION.cff
 - [x] add documentation via Sphinx and pages
 - [x] release with Zenodo DOI
